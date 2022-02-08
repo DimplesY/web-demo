@@ -2,3 +2,4 @@
 
 目录说明：
 - es6+ : javascript 语法和新特性的学习
+- design-pattern : javascript 设计模式

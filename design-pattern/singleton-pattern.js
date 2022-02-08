@@ -1,3 +1,7 @@
+/**
+ * 单例设计模式
+ */
+
 class Person {
   constructor(name) {
     this.name = name;
