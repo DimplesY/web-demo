@@ -27,3 +27,5 @@ for (let i = 1n; i <= 70n; i++) {
   p *= i;
 }
 console.log(p);
+
+console.log(Math.pow(Number(2n), Number(3n)));
