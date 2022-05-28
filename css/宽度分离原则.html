@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>宽度分离原则</title>
+    <style>
+      /* 需要一个100px宽度的盒子  上下左右20px的留白*/
+      .father {
+        width: 100px;
+        height: 20px;
+      }
+      .son {
+        width: 40px;
+        padding: 0 20px;
+        height: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="father">
+      <div class="son"></div>
+    </div>
+
+    <div class="father2">
+      <img />
+    </div>
+  </body>
+</html>

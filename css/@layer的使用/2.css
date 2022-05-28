@@ -1,0 +1,27 @@
+/* 直接声明优先级 */
+/* 修改下面定义的 layer 的顺序能够修改样式的优先级 */
+@layer B,A,C;
+
+.box {
+  width: 200px;
+  height: 200px;
+}
+
+/* 往样式当中增加自定义样式 */
+@layer A {
+  .box {
+    background-color: red;
+  }
+}
+
+@layer B {
+  .box {
+    background-color: skyblue;
+  }
+}
+
+@layer C {
+  .box {
+    background-color: yellow;
+  }
+}

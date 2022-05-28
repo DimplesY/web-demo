@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@layer的使用</title>
+    <style>
+      .box {
+        width: 200px;
+        height: 200px;
+      }
+      /* 样式定义在下方的优先级比上方的高 */
+      @layer A {
+        div.box {
+          background-color: red;
+        }
+      }
+
+      @layer B {
+        .box {
+          background-color: skyblue;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box"></div>
+  </body>
+</html>
