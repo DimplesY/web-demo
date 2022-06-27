@@ -20,6 +20,7 @@ body {
 }
 
 .panel {
+  /* 设置背景图的大小 */
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
