@@ -1,0 +1,13 @@
+lockfileVersion: 5.4
+
+specifiers:
+  minimist: ^1.2.6
+
+dependencies:
+  minimist: 1.2.6
+
+packages:
+
+  /minimist/1.2.6:
+    resolution: {integrity: sha512-Jsjnk4bw3YJqYzbdyBiNsPWHPfO++UGG749Cxs6peCu5Xg4nrena6OVxOYxrQTqww0Jmwt+Ref8rggumkTLz9Q==}
+    dev: false
