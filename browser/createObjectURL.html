@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>createObjectURL案例</title>
+  </head>
+  <body>
+    <input type="file" id="f1" />
+    <img id="img" />
+
+    <script>
+      let f1 = document.getElementById('f1')
+      let img = document.getElementById('img')
+
+      f1.addEventListener('change', (e) => {
+        let file = e.target.files[0]
+        let url = URL.createObjectURL(file)
+        img.onload = function () {
+          // 结束调用之后需要释放  https://developer.mozilla.org/zh-CN/docs/Web/API/URL/revokeObjectURL
+          URL.revokeObjectURL(url)
+        }
+        img.src = url
+      })
+    </script>
+  </body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="bootstrap.min.css" />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        width: 400px;
+        height: 200px;
+      }
+      #app {
+        height: 100%;
+        max-width: 380px;
+        overflow: hidden;
+        margin: 0 auto;
+      }
+      .btn {
+        display: inline-block;
+        padding: 5px 10px;
+        color: #fff;
+        background-color: #f55265;
+        margin-top: 10px;
+      }
+      .btn:hover {
+        background-color: pink;
+      }
+      audio {
+        display: none;
+      }
+      .title {
+        color: #fff;
+        font-size: 20px;
+        font-weight: bold;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-top: 5px;
+      }
+    </style>
+  </head>
+  <body class="bg-dark">
+    <!-- <div id="clock_div"></div> -->
+    <div id="app">
+      <div class="title">音乐盒</div>
+      <div class="flex mt-1">
+        <div id="ji" class="btn">鸡</div>
+        <div id="ni" class="btn">你</div>
+        <div id="tai" class="btn">太</div>
+        <div id="mei" class="btn">美</div>
+        <div id="xianjian" class="btn">仙剑鸡</div>
+        <div id="jinitaimei" class="btn">鸡你太美</div>
+        <div id="pf" class="btn">澎湖鸡</div>
+      </div>
+    </div>
+
+    <audio src="assets/a.mp3" id="a"></audio>
+    <audio src="assets/b.mp3" id="b"></audio>
+    <audio src="assets/c.mp3" id="c"></audio>
+    <audio src="assets/d.mp3" id="d"></audio>
+    <audio src="assets/xianjian.mp3" id="e"></audio>
+    <audio src="assets/jinitaimei.mp3" id="f"></audio>
+    <audio src="assets/pf.mp3" id="g"></audio>
+
+    <script src="js/axios.min.js"></script>
+    <script src="js/my_clock.js"></script>
+  </body>
+</html>
