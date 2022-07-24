@@ -55,6 +55,19 @@ pf.addEventListener('click', () => {
   g.play()
 })
 
+var file = document.querySelector('input')
+var img = document.querySelector('#img')
+
+file.addEventListener('change', function (e) {
+  let url = URL.createObjectURL(e.target.files[0])
+  img.src = url
+  img.onload = function () {
+    URL.revokeObjectURL(url)
+  }
+
+  console.log(url)
+})
+
 // var clock_div = document.getElementById('clock_div')
 // my_clock(clock_div)
 
