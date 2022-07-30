@@ -1,0 +1,17 @@
+{
+  "name": "vitest-demo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "vitest",
+    "coverage": "vitest run --coverage"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "c8": "^7.12.0",
+    "vitest": "^0.19.1"
+  }
+}
