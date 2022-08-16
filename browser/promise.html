@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const promise1 = Promise.resolve(2)
+      const promise2 = new Promise((rs, rj) => setTimeout(rj, 100))
+
+      /**
+       *  Promise.allSettled 返回的是一个新的 Promise 对象，该对象在所有给定的 promise 都已经 fulfilled 或 rejected 后的状态改变，
+       *  Promise.all 返回的是一个新的 Promise 对象，该对象在所有给定的 promise 都已经 fulfilled 后的状态改变，
+       */
+
+      Promise.allSettled([promise1, promise2]).then((res) => {
+        // 不管失败还是成功都能拿到
+        console.log(res)
+      })
+
+      Promise.all([promise1, promise2.catch((e) => console.log(e))]).then((res) => {
+        // 只有成功才能拿到
+        console.log(res)
+      })
+
+      
+    </script>
+  </body>
+</html>
