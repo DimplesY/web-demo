@@ -11,6 +11,6 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "experimentalDecorators": true,
-    "emitDecoratorMetadata": true
+    "emitDecoratorMetadata": true,
   }
 }
