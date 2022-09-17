@@ -16,5 +16,5 @@ eventBus.on((data) => {
   }
 })
 
-eventBus.emit('name', '小颜')
+eventBus.emit('name', '哥哥')
 eventBus.emit('age', '22')

@@ -12,6 +12,7 @@ Function.prototype.myApply = (context, args) => {
   return result
 }
 
+// 手写 call
 Function.prototype.myCall = (context, ...args) => {
   context.temp = this
   let result = context.temp(...args)

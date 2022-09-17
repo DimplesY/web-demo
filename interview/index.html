@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var obj = {
+        [Symbol.toPrimitive](type) {
+          switch (type) {
+            case 'number':
+              return 123
+            case 'string':
+              return 'str'
+            case 'default':
+              return 'default'
+          }
+        },
+      }
+
+      console.log(obj * 2) // 246
+      console.log(3 + obj) // 3default
+      console.log(String(obj)) // str
+    </script>
+  </body>
+</html>

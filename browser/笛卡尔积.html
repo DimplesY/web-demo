@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      /**
+       * 笛卡尔积组装
+       * @param {Array} list
+       * @returns []
+       */
+      function descartes(list) {
+        return list.reduce(
+          (a, b) => {
+            return a.flatMap((x) => b.map((y) => [...x, y]))
+          },
+          [[]]
+        )
+      }
+
+      const type = ['男裤', '女裤']
+      const color = ['黑色', '白色']
+      const size = ['S', 'L']
+
+      const result = descartes([type, color, size])
+      console.log(result)
+    </script>
+  </body>
+</html>

@@ -7,6 +7,4 @@ import { from, map, scan, skip, take, timer } from 'rxjs'
       skip(2)
     )
     .subscribe(console.log)
-
-  // timer(0, 1000).subscribe((value) => console.log(value))
 })()

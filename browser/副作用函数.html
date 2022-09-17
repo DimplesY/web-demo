@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const bucket = new Set()
+
+      const data = { text: 'Hello World' }
+      let activeEffect
+
+      const obj = new Proxy(data, {
+        get(target, key) {
+          if (activeEffect) {
+            bucket.add(activeEffect)
+          }
+
+          bucket.add(effect)
+          return target[key]
+        },
+        set(target, key, value) {
+          target[key] = value
+          bucket.forEach((fn) => fn())
+          return true
+        },
+      })
+
+      function effect(fn) {
+        activeEffect = fn
+        fn()
+      }
+
+      effect(() => {
+        document.body.innerText = obj.text
+      })
+
+      setTimeout(() => {
+        obj.text = '你好'
+      }, 1000)
+    </script>
+  </body>
+</html>

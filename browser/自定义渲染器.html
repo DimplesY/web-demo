@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>自定义一个渲染器</title>
+  </head>
+  <body>
+    <script>
+      function renderer(vNode, container) {
+        if (typeof vNode.tag === 'string') {
+          mountElement(vNode, container)
+        }
+        if (typeof vNode.tag === 'object') {
+          mountComponent(vNode, container)
+        }
+      }
+
+      function mountComponent(vNode, container) {
+        const subTree = vNode.tag.render()
+        renderer(subTree, container)
+      }
+
+      function mountElement(vNode, container) {
+        // 首先创建标签
+        const dom = document.createElement(vNode.tag)
+
+        for (let key in vNode.props) {
+          if (/^on/.test(key)) {
+            // 添加事件
+            dom.addEventListener(key.slice(2).toLowerCase(), vNode.props[key])
+          } else {
+            dom.setAttribute(key, vNode.props[key])
+          }
+        }
+
+        if (typeof vNode.children === 'string') {
+          dom.appendChild(document.createTextNode(vNode.children))
+        }
+        if (Array.isArray(vNode.children)) {
+          vNode.children.forEach((child) => {
+            renderer(child, dom)
+          })
+        }
+        container.appendChild(dom)
+      }
+
+      const MyComponent = () => {
+        return {
+          tag: 'div',
+          props: {
+            id: 'my-component',
+            style: 'color: red',
+          },
+          children: '自定义组件',
+        }
+      }
+
+      const MyComponent2 = {
+        render() {
+          return {
+            tag: 'div',
+            props: {
+              id: 'my-component2',
+              style: 'color: yellow',
+              onClick: () => alert('hello'),
+            },
+            children: '自定义组件',
+          }
+        },
+      }
+
+      const elNode = {
+        tag: 'div',
+        props: {
+          onClick: () => alert('Click Me'),
+          class: 'container',
+        },
+        children: [
+          {
+            tag: 'h1',
+            props: {
+              style: 'color: blue',
+            },
+            children: '自定义一个渲染器',
+          },
+          {
+            tag: MyComponent2,
+          },
+        ],
+      }
+
+      renderer(elNode, document.body)
+    </script>
+  </body>
+</html>
