@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>unocss-runtime</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@unocss/reset/tailwind.min.css" />
+  </head>
+  <body>
+    <div full bg-red-500></div>
+  </body>
+  <script>
+    window.__unocss = {
+      rules: [['full', { width: '100%', height: '100vh' }]],
+    }
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/@unocss/runtime/core.global.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@unocss/runtime/uno.global.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@unocss/runtime/attributify.global.js"></script>
+</html>

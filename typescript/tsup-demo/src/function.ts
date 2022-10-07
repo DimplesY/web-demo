@@ -38,5 +38,26 @@ function throttle2(fn:Function, wait:number){
       }, wait)
     }
   }
+}
 
+
+function deepClone(obj: any, hash: WeakMap<any, any> = new WeakMap()) {
+  if (obj === null) return obj
+  if (obj instanceof Date) return new Date(obj)
+  if (obj instanceof RegExp) return new RegExp(obj)
+  // 普通对象
+  if (typeof obj !== 'object') return obj
+  // 如果对象已经被克隆过，直接返回
+  if (hash.has(obj)) return hash.get(obj)
+  // 创建新对象
+  let cloneObj = new obj.constructor();
+  // 缓存克隆过的对象
+  hash.set(obj, cloneObj)
+  
+  for(let key in obj){
+    if(obj.hasOwnProperty(key)){
+      cloneObj[key] = deepClone(obj[key], hash)
+    }
+  }
+  return cloneObj
 }
