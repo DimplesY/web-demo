@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function Person(name) {
+        this.name = name
+      }
+
+      Person.prototype.getName = function () {
+        return this.name
+      }
+
+      // 编写一个函数实现 new
+      var objFactory = function () {
+        let obj = new Object()
+        let Constructor = [].shift.call(arguments)
+        obj.__proto__ = Constructor.prototype
+        var ret = Constructor.apply(obj, arguments)
+        return typeof ret == 'object' ? ret : obj
+      }
+      let a = new Person('jack')
+      console.log(a)
+      console.log(objFactory(Person, 'jack'))
+    </script>
+  </body>
+</html>
