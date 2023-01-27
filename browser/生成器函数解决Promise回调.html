@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function requestData(url) {
+        return new Promise((resolve, reject) => {
+          setTimeout(() => {
+            if (url.includes('url')) {
+              resolve(url)
+            } else {
+              reject('请求错误')
+            }
+          }, 1000)
+        })
+      }
+
+      function* getData() {
+        const result1 = yield requestData('url1')
+        console.log(result1)
+        const result2 = yield requestData('url2')
+        console.log(result2)
+        const result3 = yield requestData('url3')
+        console.log(result3)
+      }
+
+      function asyncAutomation(fn) {
+        const gen = fn()
+
+        const _next = (data) => {
+          const { value, done } = gen.next(data)
+          if (done) return
+          value.then(_next)
+        }
+        _next()
+      }
+
+
+      asyncAutomation(getData)
+
+    </script>
+  </body>
+</html>

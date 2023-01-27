@@ -20,6 +20,7 @@ function defineReactive(data, key, value) {
     set(nValue) {
       console.log('设置值')
       if (value === nValue) return
+      observe(nValue)
       value = nValue
     },
   })
