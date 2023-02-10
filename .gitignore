@@ -1,7 +1,7 @@
 .DS_Store
 node_modules
 /dist
-/css/scss/css
+/css/gulp-scss/dist
 
 # local env files
 .env.local
