@@ -1,0 +1,34 @@
+@charset "UTF-8";
+:root {
+  --font-stack: Helvetica, sans-serif;
+  --primary-color: #333;
+  --font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto;
+  --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas;
+}
+
+body {
+  /** 会被编译 */
+  font: 100% Helvetica, sans-serif;
+  color: #333;
+}
+body.dark {
+  background: #000;
+  color: #fff;
+}
+
+.normal-btn, .reset-btn {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+.reset-btn {
+  color: red;
+}
+
+.normal-btn {
+  color: blue;
+}
