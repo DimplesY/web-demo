@@ -17,6 +17,7 @@
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
+    "@types/node": "^18.11.18",
     "esbuild": "^0.14.51",
     "markdown-it": "^13.0.1"
   }
