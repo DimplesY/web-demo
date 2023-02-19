@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>上拉加载-下拉刷新</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      #app {
+        width: 100%;
+        color: white;
+      }
+      .box {
+        height: 100px;
+        width: 100%;
+        background: red;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+      }
+      .trans {
+        transition: all 0.5s;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="app">
+      <div class="box">1</div>
+      <div class="box">2</div>
+      <div class="box">3</div>
+      <div class="box">4</div>
+      <div class="box">5</div>
+      <div class="box">6</div>
+      <div class="box">7</div>
+      <div class="box">8</div>
+      <div class="box">9</div>
+      <div class="box">10</div>
+    </div>
+
+    <script>
+      const app = document.getElementById('app')
+      app.addEventListener('touchstart', touchStart, false)
+      app.addEventListener('touchmove', touchMove, false)
+      app.addEventListener('touchend', touchEnd, false)
+
+      window.addEventListener('scroll', function () {
+        if (window.scrollY + window.innerHeight >= document.body.scrollHeight) {
+          console.log('到底了')
+        }
+      })
+
+      let startLocation = 0
+
+      function touchStart(e) {
+        app.classList.toggle('trans')
+        startLocation = e.touches[0].pageY
+      }
+
+      function touchMove(e) {
+        const moveLocation = e.touches[0].pageY
+        const moveDistance = moveLocation - startLocation
+        app.style.transform = `translateY(${Math.min(moveDistance, 200)}px)`
+      }
+
+      function touchEnd(e) {
+        app.classList.toggle('trans')
+        app.style.transform = `translateY(0px)`
+      }
+    </script>
+  </body>
+</html>
