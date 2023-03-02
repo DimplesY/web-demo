@@ -9,8 +9,8 @@ export default defineBuildConfig({
     },
   ],
   hooks: {
-    'build:before': async (build) => {
-      console.log(build)
+    'build:before': async () => {
+      // console.log(build)
     },
   },
   // Generates .d.ts declaration file

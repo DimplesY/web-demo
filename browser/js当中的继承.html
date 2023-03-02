@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>js当中的继承</title>
+  </head>
+  <body>
+    <script>
+      // 1.原型链继承
+      function A() {
+        this.name = 'aaa'
+      }
+
+      A.prototype.getName = function () {
+        return this.name
+      }
+
+      function B() {}
+
+      B.prototype = new A()
+
+      var b = new B()
+      console.log(b.getName())
+
+      // 2. 借用构造器实现继承
+      function A() {
+        this.name = 'aaa'
+      }
+
+      function B() {
+        A.call(this, arguments)
+      }
+
+      var b = new B()
+      console.log(b.name)
+
+    </script>
+  </body>
+</html>
