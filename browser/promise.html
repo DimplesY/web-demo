@@ -15,7 +15,6 @@
        *  Promise.allSettled 返回的是一个新的 Promise 对象，该对象在所有给定的 promise 都已经 fulfilled 或 rejected 后的状态改变，
        *  Promise.all 返回的是一个新的 Promise 对象，该对象在所有给定的 promise 都已经 fulfilled 后的状态改变，
        */
-
       Promise.allSettled([promise1, promise2]).then((res) => {
         // 不管失败还是成功都能拿到
         console.log(res)

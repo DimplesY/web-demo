@@ -2,7 +2,10 @@
   "compilerOptions": {
     "target": "ESNext",
     "module": "CommonJS",
-    "lib": ["esnext"],
+    "lib": [
+      "esnext",
+      "DOM"
+    ],
     "moduleResolution": "node",
     "esModuleInterop": true,
     "strict": true,
@@ -12,5 +15,12 @@
     "skipDefaultLibCheck": true,
     "experimentalDecorators": true,
     "emitDecoratorMetadata": true,
-  }
+    "baseUrl": ".",
+    "paths": {
+      "@/*": [
+        "src/*"
+      ]
+    },
+    "outDir": "dist"
+  },
 }
