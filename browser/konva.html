@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://cdn.bootcdn.net/ajax/libs/konva/8.4.2/konva.min.js"></script>
+    <meta charset="utf-8" />
+    <title>Konva Desktop and Mobile Events Support Demo</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: #f0f0f0;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="container"></div>
+    <button onclick="back()" >返回</button>
+    <script>
+      // 使用konva 画一个签字板
+      var stage = new Konva.Stage({
+        container: 'container',
+        width: window.innerWidth,
+        height: window.innerHeight - 100,
+      })
+      var layer = new Konva.Layer()
+      stage.add(layer)
+
+      // 添加一个图片
+      var imageObj = new Image()
+      imageObj.onload = function () {
+        var yoda = new Konva.Image({
+          x: 50,
+          y: 50,
+          image: imageObj,
+          width: 500,
+          height: 500,
+        })
+        layer.add(yoda)
+        layer.draw()
+      }
+      imageObj.src = 'https://konvajs.org/assets/yoda.jpg'
+
+      // 使用konva 画一个签字板
+      var isPaint = false
+      var lastLine
+      stage.on('mousedown touchstart', function () {
+        isPaint = true
+        var pos = stage.getPointerPosition()
+        lastLine = new Konva.Line({
+          stroke: '#EFB84D66',
+          strokeWidth: 30,
+          globalCompositeOperation: 'source-over',
+          points: [pos.x, pos.y],
+        })
+        layer.add(lastLine)
+      })
+      stage.on('mouseup touchend', function () {
+        isPaint = false
+      })
+      // and core function - drawing
+      stage.on('mousemove touchmove', function () {
+        if (!isPaint) {
+          return
+        }
+        // 减少画线的频率
+        if (Math.random() > 0.50) {
+          return
+        }
+        var pos = stage.getPointerPosition()
+        var newPoints = lastLine.points().concat([pos.x, pos.y])
+        lastLine.points(newPoints)
+        layer.batchDraw()
+      })
+
+      function back(){
+        const newPoints = lastLine.points().slice(0,-2)
+        lastLine.points(newPoints)
+        layer.batchDraw()
+      }
+
+    </script>
+  </body>
+</html>

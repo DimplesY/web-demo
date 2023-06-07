@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+
+
+    function getTodos() {
+      return new Promise((resolve, reject) => {
+        setTimeout(() => {
+          resolve(['todo1', 'todo2', 'todo3']);
+        }, 2000);
+      });
+    }
+
+    function * getData(){
+      const result1 = yield getTodos()
+      console.log(result1)
+      const result2 = yield getTodos()
+      console.log(result2)
+      const result3 = yield getTodos()
+      console.log(result3)
+    }
+
+    function asyncAutomation(getFn){
+      const generator = getFn()
+
+      const _automation = (result) => {
+        let nextData = generator.next(result)
+        if(nextData.done) return
+        nextData.value.then(res => {
+          _automation(res)
+        })
+      } 
+      _automation()
+    }
+
+    asyncAutomation(getData)
+
+  </script>
+</body>
+</html>
