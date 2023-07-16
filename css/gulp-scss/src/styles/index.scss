@@ -1,1 +1,14 @@
-@use './common/base'
+@use './mixins/mixins.scss' as *;
+
+
+@include b(name) {
+  color: red;
+}
+
+@include e(element) {
+  color: blue;
+}
+
+@include m(modifier) {
+  color: green;
+}

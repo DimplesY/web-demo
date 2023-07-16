@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .box {
+      height: 100vh;
+    }
+
+    .a {
+      height: 100px;
+      width: 100px;
+      background-color: red;
+    }
+
+  </style>
+</head>
+<body>
+  
+  <div class="box"></div>
+
+  <div class="a"></div>
+
+  <div class="box"></div>
+
+  <script>
+    window.addEventListener('scroll', (e) => {
+     const result =  document.querySelector(".a").getBoundingClientRect()
+     console.log(result)
+     if(result.top < window.innerHeight && result.bottom > 0){
+        console.log('in')
+     }
+     if(result.top > window.innerHeight || result.bottom < 0){
+        console.log('out')
+     }
+    })
+  </script>
+
+</body>
+</html>

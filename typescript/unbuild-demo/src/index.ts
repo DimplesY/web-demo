@@ -1,8 +1,1 @@
-export function sum(a: number, b: number): number {
-  return a + b
-}
-
-export function add(a: number, b: number): number {
-  return a + b
-}
-
+export type L2T<L, LAlias = L, LAlias2 = L> = [L] extends [never] ? [] : L extends infer LItem ? [LItem?, ...L2T<Exclude<L, LItem>, LAlias, LAlias2>] : never

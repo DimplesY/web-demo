@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      position: relative;
+      margin: 0 auto;
+      max-width: 800px;
+    }
+    .container div {
+      position: absolute;
+      transition: all 0.5s;
+      box-sizing: border-box;
+    }
+    img {
+      width: 100%;
+      display: block;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="container"></div>
+
+  <script>
+    const imgArr = [
+    ]
+
+    const container = document.querySelector('.container')
+
+    let maxColumn = Math.floor(container.offsetWidth / 200)
+
+
+    let topArr = new Array(maxColumn).fill(0)
+
+
+    function create(){
+
+      const d = document.createElement('div')
+      d.style.width = '200px'
+      const img = document.createElement('img')
+      img.src = imgArr[Math.floor(Math.random() * imgArr.length)]
+
+      img.onload = function(){
+        layout(d)
+      }
+
+      d.appendChild(img)
+      container.appendChild(d)
+
+      return d
+    }
+
+    function layout(d){
+      // 找出最小高度
+      const min = Math.min(...topArr)
+      // 找出最小高度的索引
+      const index = topArr.findIndex(item => item === min)
+      // 设置位置
+      d.style.left = index * (200)  + 'px'
+      d.style.top = min + 'px'
+      d.style.padding = '5px'
+      topArr[index] += d.offsetHeight
+    }
+
+    const domArr = []
+
+    for(let i = 0; i < 20; i++){
+      domArr.push(create())
+    }
+    let timer = null
+    window.addEventListener('resize', () => {
+      if(timer) clearTimeout(timer)
+      timer = setTimeout(() => {
+        topArr = new Array(Math.floor(container.offsetWidth / 200)).fill(0)
+        domArr.forEach(item => {
+          layout(item)
+        })
+        timer = null
+      }, 1000)
+    })
+
+
+
+  </script>
+  
+</body>
+</html>

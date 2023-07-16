@@ -1,0 +1,29 @@
+@use '_var' as *;
+
+@mixin b($block) {
+  $B: $namespace !global;
+
+  .#{$B} {
+    @content;
+  }
+}
+
+@mixin e($element) {
+  $E: #{$B+$element-separator+$element} !global;
+
+  @at-root {
+    .#{$E} {
+      @content;
+    }
+  }
+}
+
+@mixin m($modifier) {
+  $M: #{$E+$modifier-separator+$modifier} !global;
+
+  @at-root {
+    .#{$M} {
+      @content;
+    }
+  }
+}
