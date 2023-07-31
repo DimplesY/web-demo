@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>closestElement - demo</title>
+</head>
+<body>
+  <div class="parent">
+     <div class="box">
+       <button id="btn">点击</button>
+     </div>
+  </div>
+
+  <script>
+    document.querySelector('.box').addEventListener('click', (e) => {
+      console.log(e)
+    }, false)
+
+    document.querySelector("#btn").addEventListener('click', (e) => {
+      console.log(e.target.closest('.parent'))
+    }, false)
+  </script>
+</body>
+</html>
