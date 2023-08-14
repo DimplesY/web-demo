@@ -1,4 +1,3 @@
-
 interface IRecvice {
   value: number,
   money: number
@@ -38,11 +37,11 @@ function getRecvice(arr:IRecvice[]) {
 
 const result = getRecvice([
   {
-    value: 0,
+    value: 10,
     money: 50
   },
   {
-    value: 0,
+    value: 10,
     money: 100
   }
 ])
