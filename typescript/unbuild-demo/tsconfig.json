@@ -1,9 +1,9 @@
 {
   "compilerOptions": {
-    "target": "es2018",
-    "module": "NodeNext",
+    "target": "esnext",
+    // "module": "NodeNext",
     "lib": ["esnext", "DOM"],
-    "moduleResolution": "node",
+    "moduleResolution": "Node",
     "esModuleInterop": true,
     "strict": true,
     "strictNullChecks": true,

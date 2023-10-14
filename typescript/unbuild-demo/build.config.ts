@@ -5,9 +5,13 @@ export default defineBuildConfig({
     {
       builder: 'mkdist',
       input: 'src/',
-      format: 'esm',
+      // format: 'cjs',
     },
+    // './src/index.ts',
   ],
+  rollup: {
+    // emitCJS: true,
+  },
   hooks: {
     'build:before': async () => {
       // console.log(build)

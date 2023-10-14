@@ -5,20 +5,20 @@
   "author": "",
   "license": "ISC",
   "keywords": [],
-  "main": "index.js",
   "scripts": {
     "build": "unbuild",
     "dev": "unbuild --stub"
   },
   "dependencies": {
-    "mri": "^1.2.0"
+    "mri": "^1.2.0",
+    "reflect-metadata": "^0.1.13"
   },
   "devDependencies": {
-    "@antfu/eslint-config": "^0.25.2",
-    "@types/node": "^18.0.6",
-    "esbuild": "^0.17.10",
-    "eslint": "^8.20.0",
-    "typescript": "^4.7.4",
-    "unbuild": "^0.7.6"
+    "@antfu/eslint-config": "^0.41.0",
+    "@types/node": "^18.17.12",
+    "esbuild": "^0.19.2",
+    "eslint": "^8.48.0",
+    "typescript": "^5.2.2",
+    "unbuild": "^2.0.0"
   }
 }

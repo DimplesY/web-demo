@@ -1,4 +1,4 @@
-import { Observable } from 'rxjs'
+import { Observable, first, of } from 'rxjs'
 ;(() => {
   // let instance = new Observable(
   //   /** 订阅 */
@@ -18,12 +18,12 @@ import { Observable } from 'rxjs'
   //   },
   // })
 
-  let ins = new Observable((s) => {
-    console.log('Hello')
-    s.next(1)
-  })
+  // let ins = new Observable((s) => {
+  //   console.log('Hello')
+  //   s.next(1)
+  // })
 
-  ins.subscribe(console.log)
-  ins.subscribe(console.log)
-  
+  // ins.subscribe(console.log)
+  // ins.subscribe(console.log)
+  of(1,2,3).pipe(first()).subscribe(console.log)
 })()

@@ -1,0 +1,2667 @@
+{
+  "gpsDtos": [
+      {
+          "sysTime": "1693883493000",
+          "latitude": 29.591424,
+          "direction": 0.0,
+          "carSpeed": 0.0,
+          "longitude": 106.494672
+      },
+      {
+          "sysTime": "1693883509000",
+          "latitude": 29.591424,
+          "direction": 5.9,
+          "carSpeed": 89.0,
+          "longitude": 106.494672
+      },
+      {
+          "sysTime": "1693883520000",
+          "latitude": 29.59142,
+          "direction": 81.3,
+          "carSpeed": 89.0,
+          "longitude": 106.49467
+      },
+      {
+          "sysTime": "1693883530000",
+          "latitude": 29.59119,
+          "direction": 206.6,
+          "carSpeed": 89.0,
+          "longitude": 106.49468
+      },
+      {
+          "sysTime": "1693883540000",
+          "latitude": 29.59119,
+          "direction": 226.8,
+          "carSpeed": 89.0,
+          "longitude": 106.49468
+      },
+      {
+          "sysTime": "1693883551000",
+          "latitude": 29.59112,
+          "direction": 268.3,
+          "carSpeed": 89.0,
+          "longitude": 106.49451
+      },
+      {
+          "sysTime": "1693883561000",
+          "latitude": 29.59098,
+          "direction": 216.9,
+          "carSpeed": 89.0,
+          "longitude": 106.49412
+      },
+      {
+          "sysTime": "1693883572000",
+          "latitude": 29.59098,
+          "direction": 254.7,
+          "carSpeed": 89.0,
+          "longitude": 106.49361
+      },
+      {
+          "sysTime": "1693883582000",
+          "latitude": 29.59097,
+          "direction": 127.6,
+          "carSpeed": 89.0,
+          "longitude": 106.49331
+      },
+      {
+          "sysTime": "1693883593000",
+          "latitude": 29.59095,
+          "direction": 104.5,
+          "carSpeed": 89.0,
+          "longitude": 106.49284
+      },
+      {
+          "sysTime": "1693883603000",
+          "latitude": 29.59094,
+          "direction": 9.2,
+          "carSpeed": 89.0,
+          "longitude": 106.4925
+      },
+      {
+          "sysTime": "1693883614000",
+          "latitude": 29.59095,
+          "direction": 218.9,
+          "carSpeed": 89.0,
+          "longitude": 106.4922
+      },
+      {
+          "sysTime": "1693883624000",
+          "latitude": 29.59095,
+          "direction": 285.4,
+          "carSpeed": 89.0,
+          "longitude": 106.49166
+      },
+      {
+          "sysTime": "1693883634000",
+          "latitude": 29.59095,
+          "direction": 268.1,
+          "carSpeed": 89.0,
+          "longitude": 106.49156
+      },
+      {
+          "sysTime": "1693883645000",
+          "latitude": 29.59095,
+          "direction": 141.5,
+          "carSpeed": 89.0,
+          "longitude": 106.49118
+      },
+      {
+          "sysTime": "1693883655000",
+          "latitude": 29.59094,
+          "direction": 301.9,
+          "carSpeed": 89.0,
+          "longitude": 106.49047
+      },
+      {
+          "sysTime": "1693883666000",
+          "latitude": 29.59094,
+          "direction": 347.8,
+          "carSpeed": 89.0,
+          "longitude": 106.48967
+      },
+      {
+          "sysTime": "1693883676000",
+          "latitude": 29.59094,
+          "direction": 294.9,
+          "carSpeed": 89.0,
+          "longitude": 106.48967
+      },
+      {
+          "sysTime": "1693883687000",
+          "latitude": 29.59106,
+          "direction": 241.4,
+          "carSpeed": 89.0,
+          "longitude": 106.48948
+      },
+      {
+          "sysTime": "1693883697000",
+          "latitude": 29.59114,
+          "direction": 76.3,
+          "carSpeed": 89.0,
+          "longitude": 106.4894
+      },
+      {
+          "sysTime": "1693883708000",
+          "latitude": 29.59114,
+          "direction": 184.2,
+          "carSpeed": 89.0,
+          "longitude": 106.4894
+      },
+      {
+          "sysTime": "1693883718000",
+          "latitude": 29.59131,
+          "direction": 48.8,
+          "carSpeed": 89.0,
+          "longitude": 106.48942
+      },
+      {
+          "sysTime": "1693883728000",
+          "latitude": 29.59197,
+          "direction": 121.9,
+          "carSpeed": 89.0,
+          "longitude": 106.48953
+      },
+      {
+          "sysTime": "1693883739000",
+          "latitude": 29.59225,
+          "direction": 270.4,
+          "carSpeed": 89.0,
+          "longitude": 106.48968
+      },
+      {
+          "sysTime": "1693883749000",
+          "latitude": 29.59237,
+          "direction": 348.4,
+          "carSpeed": 89.0,
+          "longitude": 106.48971
+      },
+      {
+          "sysTime": "1693883760000",
+          "latitude": 29.59257,
+          "direction": 95.0,
+          "carSpeed": 89.0,
+          "longitude": 106.48968
+      },
+      {
+          "sysTime": "1693883770000",
+          "latitude": 29.59263,
+          "direction": 3.0,
+          "carSpeed": 89.0,
+          "longitude": 106.48965
+      },
+      {
+          "sysTime": "1693883781000",
+          "latitude": 29.59274,
+          "direction": 325.0,
+          "carSpeed": 89.0,
+          "longitude": 106.48954
+      },
+      {
+          "sysTime": "1693883791000",
+          "latitude": 29.5929,
+          "direction": 258.5,
+          "carSpeed": 89.0,
+          "longitude": 106.48949
+      },
+      {
+          "sysTime": "1693883802000",
+          "latitude": 29.59485,
+          "direction": 45.3,
+          "carSpeed": 89.0,
+          "longitude": 106.48953
+      },
+      {
+          "sysTime": "1693883812000",
+          "latitude": 29.59503,
+          "direction": 286.1,
+          "carSpeed": 89.0,
+          "longitude": 106.48949
+      },
+      {
+          "sysTime": "1693883822000",
+          "latitude": 29.59506,
+          "direction": 317.1,
+          "carSpeed": 89.0,
+          "longitude": 106.48944
+      },
+      {
+          "sysTime": "1693883833000",
+          "latitude": 29.59506,
+          "direction": 207.5,
+          "carSpeed": 89.0,
+          "longitude": 106.48944
+      },
+      {
+          "sysTime": "1693883843000",
+          "latitude": 29.59593,
+          "direction": 174.5,
+          "carSpeed": 89.0,
+          "longitude": 106.48946
+      },
+      {
+          "sysTime": "1693883854000",
+          "latitude": 29.59641,
+          "direction": 21.6,
+          "carSpeed": 89.0,
+          "longitude": 106.48949
+      },
+      {
+          "sysTime": "1693883864000",
+          "latitude": 29.59719,
+          "direction": 206.9,
+          "carSpeed": 89.0,
+          "longitude": 106.48951
+      },
+      {
+          "sysTime": "1693883875000",
+          "latitude": 29.59752,
+          "direction": 163.3,
+          "carSpeed": 89.0,
+          "longitude": 106.48952
+      },
+      {
+          "sysTime": "1693883885000",
+          "latitude": 29.598,
+          "direction": 279.2,
+          "carSpeed": 89.0,
+          "longitude": 106.48953
+      },
+      {
+          "sysTime": "1693883896000",
+          "latitude": 29.59866,
+          "direction": 154.8,
+          "carSpeed": 89.0,
+          "longitude": 106.48955
+      },
+      {
+          "sysTime": "1693883906000",
+          "latitude": 29.59912,
+          "direction": 136.3,
+          "carSpeed": 89.0,
+          "longitude": 106.48957
+      },
+      {
+          "sysTime": "1693883916000",
+          "latitude": 29.59967,
+          "direction": 158.7,
+          "carSpeed": 89.0,
+          "longitude": 106.48959
+      },
+      {
+          "sysTime": "1693883927000",
+          "latitude": 29.60082,
+          "direction": 199.8,
+          "carSpeed": 89.0,
+          "longitude": 106.48959
+      },
+      {
+          "sysTime": "1693883937000",
+          "latitude": 29.60082,
+          "direction": 313.6,
+          "carSpeed": 89.0,
+          "longitude": 106.48959
+      },
+      {
+          "sysTime": "1693883948000",
+          "latitude": 29.60203,
+          "direction": 270.9,
+          "carSpeed": 89.0,
+          "longitude": 106.48964
+      },
+      {
+          "sysTime": "1693883958000",
+          "latitude": 29.60283,
+          "direction": 282.2,
+          "carSpeed": 89.0,
+          "longitude": 106.48963
+      },
+      {
+          "sysTime": "1693883969000",
+          "latitude": 29.60362,
+          "direction": 13.3,
+          "carSpeed": 89.0,
+          "longitude": 106.48967
+      },
+      {
+          "sysTime": "1693883979000",
+          "latitude": 29.60404,
+          "direction": 242.7,
+          "carSpeed": 89.0,
+          "longitude": 106.48967
+      },
+      {
+          "sysTime": "1693883990000",
+          "latitude": 29.60609,
+          "direction": 228.3,
+          "carSpeed": 89.0,
+          "longitude": 106.48978
+      },
+      {
+          "sysTime": "1693884000000",
+          "latitude": 29.60646,
+          "direction": 72.8,
+          "carSpeed": 89.0,
+          "longitude": 106.48986
+      },
+      {
+          "sysTime": "1693884010000",
+          "latitude": 29.60646,
+          "direction": 77.9,
+          "carSpeed": 89.0,
+          "longitude": 106.48986
+      },
+      {
+          "sysTime": "1693884021000",
+          "latitude": 29.60771,
+          "direction": 352.3,
+          "carSpeed": 89.0,
+          "longitude": 106.4901
+      },
+      {
+          "sysTime": "1693884031000",
+          "latitude": 29.60795,
+          "direction": 153.8,
+          "carSpeed": 89.0,
+          "longitude": 106.49015
+      },
+      {
+          "sysTime": "1693884042000",
+          "latitude": 29.61043,
+          "direction": 340.6,
+          "carSpeed": 89.0,
+          "longitude": 106.49061
+      },
+      {
+          "sysTime": "1693884052000",
+          "latitude": 29.61081,
+          "direction": 313.9,
+          "carSpeed": 89.0,
+          "longitude": 106.49065
+      },
+      {
+          "sysTime": "1693884063000",
+          "latitude": 29.61163,
+          "direction": 353.7,
+          "carSpeed": 89.0,
+          "longitude": 106.49073
+      },
+      {
+          "sysTime": "1693884073000",
+          "latitude": 29.61194,
+          "direction": 152.4,
+          "carSpeed": 89.0,
+          "longitude": 106.49078
+      },
+      {
+          "sysTime": "1693884084000",
+          "latitude": 29.61514,
+          "direction": 244.0,
+          "carSpeed": 89.0,
+          "longitude": 106.49104
+      },
+      {
+          "sysTime": "1693884094000",
+          "latitude": 29.61739,
+          "direction": 170.8,
+          "carSpeed": 89.0,
+          "longitude": 106.49118
+      },
+      {
+          "sysTime": "1693884105000",
+          "latitude": 29.61842,
+          "direction": 218.1,
+          "carSpeed": 89.0,
+          "longitude": 106.49117
+      },
+      {
+          "sysTime": "1693884115000",
+          "latitude": 29.61974,
+          "direction": 131.8,
+          "carSpeed": 89.0,
+          "longitude": 106.49107
+      },
+      {
+          "sysTime": "1693884126000",
+          "latitude": 29.62322,
+          "direction": 265.2,
+          "carSpeed": 89.0,
+          "longitude": 106.49046
+      },
+      {
+          "sysTime": "1693884137000",
+          "latitude": 29.6245,
+          "direction": 251.9,
+          "carSpeed": 89.0,
+          "longitude": 106.49016
+      },
+      {
+          "sysTime": "1693884147000",
+          "latitude": 29.62703,
+          "direction": 356.2,
+          "carSpeed": 89.0,
+          "longitude": 106.48956
+      },
+      {
+          "sysTime": "1693884157000",
+          "latitude": 29.63079,
+          "direction": 82.2,
+          "carSpeed": 89.0,
+          "longitude": 106.48887
+      },
+      {
+          "sysTime": "1693884168000",
+          "latitude": 29.63338,
+          "direction": 178.4,
+          "carSpeed": 89.0,
+          "longitude": 106.48871
+      },
+      {
+          "sysTime": "1693884178000",
+          "latitude": 29.64121,
+          "direction": 52.1,
+          "carSpeed": 89.0,
+          "longitude": 106.48883
+      },
+      {
+          "sysTime": "1693884189000",
+          "latitude": 29.64681,
+          "direction": 11.3,
+          "carSpeed": 89.0,
+          "longitude": 106.48888
+      },
+      {
+          "sysTime": "1693884199000",
+          "latitude": 29.64875,
+          "direction": 110.8,
+          "carSpeed": 89.0,
+          "longitude": 106.48846
+      },
+      {
+          "sysTime": "1693884210000",
+          "latitude": 29.65116,
+          "direction": 246.4,
+          "carSpeed": 89.0,
+          "longitude": 106.48745
+      },
+      {
+          "sysTime": "1693884220000",
+          "latitude": 29.654,
+          "direction": 294.6,
+          "carSpeed": 89.0,
+          "longitude": 106.48607
+      },
+      {
+          "sysTime": "1693884231000",
+          "latitude": 29.65793,
+          "direction": 138.6,
+          "carSpeed": 89.0,
+          "longitude": 106.48433
+      },
+      {
+          "sysTime": "1693884241000",
+          "latitude": 29.66003,
+          "direction": 68.6,
+          "carSpeed": 89.0,
+          "longitude": 106.48376
+      },
+      {
+          "sysTime": "1693884252000",
+          "latitude": 29.66355,
+          "direction": 140.0,
+          "carSpeed": 89.0,
+          "longitude": 106.48332
+      },
+      {
+          "sysTime": "1693884262000",
+          "latitude": 29.6684,
+          "direction": 105.0,
+          "carSpeed": 89.0,
+          "longitude": 106.48305
+      },
+      {
+          "sysTime": "1693884272000",
+          "latitude": 29.6693,
+          "direction": 277.6,
+          "carSpeed": 89.0,
+          "longitude": 106.48293
+      },
+      {
+          "sysTime": "1693884283000",
+          "latitude": 29.66975,
+          "direction": 344.4,
+          "carSpeed": 89.0,
+          "longitude": 106.48286
+      },
+      {
+          "sysTime": "1693884293000",
+          "latitude": 29.67017,
+          "direction": 95.2,
+          "carSpeed": 89.0,
+          "longitude": 106.48277
+      },
+      {
+          "sysTime": "1693884304000",
+          "latitude": 29.67042,
+          "direction": 210.9,
+          "carSpeed": 89.0,
+          "longitude": 106.48267
+      },
+      {
+          "sysTime": "1693884314000",
+          "latitude": 29.67053,
+          "direction": 348.2,
+          "carSpeed": 89.0,
+          "longitude": 106.48263
+      },
+      {
+          "sysTime": "1693884325000",
+          "latitude": 29.6712,
+          "direction": 335.0,
+          "carSpeed": 89.0,
+          "longitude": 106.48229
+      },
+      {
+          "sysTime": "1693884335000",
+          "latitude": 29.67253,
+          "direction": 212.2,
+          "carSpeed": 89.0,
+          "longitude": 106.48138
+      },
+      {
+          "sysTime": "1693884346000",
+          "latitude": 29.67308,
+          "direction": 134.7,
+          "carSpeed": 89.0,
+          "longitude": 106.48081
+      },
+      {
+          "sysTime": "1693884356000",
+          "latitude": 29.67527,
+          "direction": 252.1,
+          "carSpeed": 89.0,
+          "longitude": 106.47825
+      },
+      {
+          "sysTime": "1693884366000",
+          "latitude": 29.67835,
+          "direction": 180.5,
+          "carSpeed": 89.0,
+          "longitude": 106.47457
+      },
+      {
+          "sysTime": "1693884377000",
+          "latitude": 29.67946,
+          "direction": 52.9,
+          "carSpeed": 89.0,
+          "longitude": 106.47327
+      },
+      {
+          "sysTime": "1693884387000",
+          "latitude": 29.68133,
+          "direction": 132.2,
+          "carSpeed": 89.0,
+          "longitude": 106.47111
+      },
+      {
+          "sysTime": "1693884398000",
+          "latitude": 29.68242,
+          "direction": 336.4,
+          "carSpeed": 89.0,
+          "longitude": 106.47001
+      },
+      {
+          "sysTime": "1693884408000",
+          "latitude": 29.68357,
+          "direction": 253.6,
+          "carSpeed": 89.0,
+          "longitude": 106.46934
+      },
+      {
+          "sysTime": "1693884419000",
+          "latitude": 29.6847,
+          "direction": 180.7,
+          "carSpeed": 89.0,
+          "longitude": 106.4689
+      },
+      {
+          "sysTime": "1693884429000",
+          "latitude": 29.68472,
+          "direction": 229.1,
+          "carSpeed": 89.0,
+          "longitude": 106.46889
+      },
+      {
+          "sysTime": "1693884440000",
+          "latitude": 29.68968,
+          "direction": 322.9,
+          "carSpeed": 89.0,
+          "longitude": 106.46812
+      },
+      {
+          "sysTime": "1693884450000",
+          "latitude": 29.69185,
+          "direction": 352.4,
+          "carSpeed": 89.0,
+          "longitude": 106.46778
+      },
+      {
+          "sysTime": "1693884461000",
+          "latitude": 29.69328,
+          "direction": 61.0,
+          "carSpeed": 89.0,
+          "longitude": 106.4673
+      },
+      {
+          "sysTime": "1693884471000",
+          "latitude": 29.69393,
+          "direction": 23.0,
+          "carSpeed": 89.0,
+          "longitude": 106.46699
+      },
+      {
+          "sysTime": "1693884481000",
+          "latitude": 29.69582,
+          "direction": 231.0,
+          "carSpeed": 89.0,
+          "longitude": 106.46596
+      },
+      {
+          "sysTime": "1693884492000",
+          "latitude": 29.69897,
+          "direction": 266.8,
+          "carSpeed": 89.0,
+          "longitude": 106.46429
+      },
+      {
+          "sysTime": "1693884502000",
+          "latitude": 29.70452,
+          "direction": 203.5,
+          "carSpeed": 89.0,
+          "longitude": 106.46134
+      },
+      {
+          "sysTime": "1693884513000",
+          "latitude": 29.70564,
+          "direction": 231.3,
+          "carSpeed": 89.0,
+          "longitude": 106.46076
+      },
+      {
+          "sysTime": "1693884523000",
+          "latitude": 29.70651,
+          "direction": 92.5,
+          "carSpeed": 89.0,
+          "longitude": 106.46034
+      },
+      {
+          "sysTime": "1693884534000",
+          "latitude": 29.71061,
+          "direction": 230.1,
+          "carSpeed": 89.0,
+          "longitude": 106.45904
+      },
+      {
+          "sysTime": "1693884544000",
+          "latitude": 29.71332,
+          "direction": 1.9,
+          "carSpeed": 89.0,
+          "longitude": 106.45824
+      },
+      {
+          "sysTime": "1693884555000",
+          "latitude": 29.71686,
+          "direction": 131.8,
+          "carSpeed": 89.0,
+          "longitude": 106.45729
+      },
+      {
+          "sysTime": "1693884565000",
+          "latitude": 29.71835,
+          "direction": 341.8,
+          "carSpeed": 89.0,
+          "longitude": 106.45689
+      },
+      {
+          "sysTime": "1693884575000",
+          "latitude": 29.72292,
+          "direction": 138.2,
+          "carSpeed": 89.0,
+          "longitude": 106.45556
+      },
+      {
+          "sysTime": "1693884586000",
+          "latitude": 29.7246,
+          "direction": 299.3,
+          "carSpeed": 89.0,
+          "longitude": 106.45518
+      },
+      {
+          "sysTime": "1693884596000",
+          "latitude": 29.7252,
+          "direction": 283.7,
+          "carSpeed": 89.0,
+          "longitude": 106.4551
+      },
+      {
+          "sysTime": "1693884607000",
+          "latitude": 29.72757,
+          "direction": 13.8,
+          "carSpeed": 89.0,
+          "longitude": 106.4549
+      },
+      {
+          "sysTime": "1693884617000",
+          "latitude": 29.73018,
+          "direction": 235.5,
+          "carSpeed": 89.0,
+          "longitude": 106.455
+      },
+      {
+          "sysTime": "1693884628000",
+          "latitude": 29.73046,
+          "direction": 36.2,
+          "carSpeed": 89.0,
+          "longitude": 106.45502
+      },
+      {
+          "sysTime": "1693884638000",
+          "latitude": 29.73247,
+          "direction": 9.3,
+          "carSpeed": 89.0,
+          "longitude": 106.45516
+      },
+      {
+          "sysTime": "1693884649000",
+          "latitude": 29.73311,
+          "direction": 57.2,
+          "carSpeed": 89.0,
+          "longitude": 106.4552
+      },
+      {
+          "sysTime": "1693884659000",
+          "latitude": 29.73412,
+          "direction": 33.0,
+          "carSpeed": 89.0,
+          "longitude": 106.45518
+      },
+      {
+          "sysTime": "1693884669000",
+          "latitude": 29.73748,
+          "direction": 182.6,
+          "carSpeed": 89.0,
+          "longitude": 106.45478
+      },
+      {
+          "sysTime": "1693884680000",
+          "latitude": 29.73757,
+          "direction": 243.1,
+          "carSpeed": 89.0,
+          "longitude": 106.45478
+      },
+      {
+          "sysTime": "1693884690000",
+          "latitude": 29.7386,
+          "direction": 279.5,
+          "carSpeed": 89.0,
+          "longitude": 106.45473
+      },
+      {
+          "sysTime": "1693884701000",
+          "latitude": 29.74042,
+          "direction": 130.5,
+          "carSpeed": 89.0,
+          "longitude": 106.45468
+      },
+      {
+          "sysTime": "1693884711000",
+          "latitude": 29.75274,
+          "direction": 359.7,
+          "carSpeed": 89.0,
+          "longitude": 106.45478
+      },
+      {
+          "sysTime": "1693884722000",
+          "latitude": 29.75498,
+          "direction": 175.7,
+          "carSpeed": 89.0,
+          "longitude": 106.45501
+      },
+      {
+          "sysTime": "1693884732000",
+          "latitude": 29.7557,
+          "direction": 29.3,
+          "carSpeed": 89.0,
+          "longitude": 106.45507
+      },
+      {
+          "sysTime": "1693884743000",
+          "latitude": 29.75871,
+          "direction": 46.1,
+          "carSpeed": 89.0,
+          "longitude": 106.45581
+      },
+      {
+          "sysTime": "1693884753000",
+          "latitude": 29.76042,
+          "direction": 75.6,
+          "carSpeed": 89.0,
+          "longitude": 106.45622
+      },
+      {
+          "sysTime": "1693884763000",
+          "latitude": 29.76067,
+          "direction": 117.7,
+          "carSpeed": 89.0,
+          "longitude": 106.45629
+      },
+      {
+          "sysTime": "1693884774000",
+          "latitude": 29.76342,
+          "direction": 290.0,
+          "carSpeed": 89.0,
+          "longitude": 106.45684
+      },
+      {
+          "sysTime": "1693884784000",
+          "latitude": 29.76656,
+          "direction": 17.2,
+          "carSpeed": 89.0,
+          "longitude": 106.45681
+      },
+      {
+          "sysTime": "1693884795000",
+          "latitude": 29.76791,
+          "direction": 331.6,
+          "carSpeed": 89.0,
+          "longitude": 106.45649
+      },
+      {
+          "sysTime": "1693884805000",
+          "latitude": 29.769,
+          "direction": 146.1,
+          "carSpeed": 89.0,
+          "longitude": 106.456
+      },
+      {
+          "sysTime": "1693884816000",
+          "latitude": 29.76942,
+          "direction": 7.5,
+          "carSpeed": 89.0,
+          "longitude": 106.45576
+      },
+      {
+          "sysTime": "1693884826000",
+          "latitude": 29.77044,
+          "direction": 116.9,
+          "carSpeed": 89.0,
+          "longitude": 106.45506
+      },
+      {
+          "sysTime": "1693884837000",
+          "latitude": 29.77066,
+          "direction": 233.9,
+          "carSpeed": 89.0,
+          "longitude": 106.45487
+      },
+      {
+          "sysTime": "1693884847000",
+          "latitude": 29.77083,
+          "direction": 10.7,
+          "carSpeed": 89.0,
+          "longitude": 106.45471
+      },
+      {
+          "sysTime": "1693884858000",
+          "latitude": 29.77135,
+          "direction": 140.8,
+          "carSpeed": 89.0,
+          "longitude": 106.4542
+      },
+      {
+          "sysTime": "1693884868000",
+          "latitude": 29.77151,
+          "direction": 223.8,
+          "carSpeed": 89.0,
+          "longitude": 106.45402
+      },
+      {
+          "sysTime": "1693884878000",
+          "latitude": 29.77173,
+          "direction": 118.4,
+          "carSpeed": 89.0,
+          "longitude": 106.45376
+      },
+      {
+          "sysTime": "1693884889000",
+          "latitude": 29.77227,
+          "direction": 118.0,
+          "carSpeed": 89.0,
+          "longitude": 106.45306
+      },
+      {
+          "sysTime": "1693884899000",
+          "latitude": 29.77249,
+          "direction": 333.0,
+          "carSpeed": 89.0,
+          "longitude": 106.45273
+      },
+      {
+          "sysTime": "1693884910000",
+          "latitude": 29.77285,
+          "direction": 80.4,
+          "carSpeed": 89.0,
+          "longitude": 106.45215
+      },
+      {
+          "sysTime": "1693884920000",
+          "latitude": 29.77319,
+          "direction": 152.9,
+          "carSpeed": 89.0,
+          "longitude": 106.45154
+      },
+      {
+          "sysTime": "1693884931000",
+          "latitude": 29.77355,
+          "direction": 113.9,
+          "carSpeed": 89.0,
+          "longitude": 106.45088
+      },
+      {
+          "sysTime": "1693884941000",
+          "latitude": 29.7738,
+          "direction": 241.1,
+          "carSpeed": 89.0,
+          "longitude": 106.45039
+      },
+      {
+          "sysTime": "1693884952000",
+          "latitude": 29.77453,
+          "direction": 129.2,
+          "carSpeed": 89.0,
+          "longitude": 106.44889
+      },
+      {
+          "sysTime": "1693884962000",
+          "latitude": 29.7748,
+          "direction": 118.4,
+          "carSpeed": 89.0,
+          "longitude": 106.44834
+      },
+      {
+          "sysTime": "1693884972000",
+          "latitude": 29.77576,
+          "direction": 100.8,
+          "carSpeed": 89.0,
+          "longitude": 106.44632
+      },
+      {
+          "sysTime": "1693884983000",
+          "latitude": 29.77662,
+          "direction": 217.3,
+          "carSpeed": 89.0,
+          "longitude": 106.44455
+      },
+      {
+          "sysTime": "1693884993000",
+          "latitude": 29.77751,
+          "direction": 171.4,
+          "carSpeed": 89.0,
+          "longitude": 106.44269
+      },
+      {
+          "sysTime": "1693885004000",
+          "latitude": 29.7791,
+          "direction": 171.9,
+          "carSpeed": 89.0,
+          "longitude": 106.43939
+      },
+      {
+          "sysTime": "1693885014000",
+          "latitude": 29.78037,
+          "direction": 289.9,
+          "carSpeed": 89.0,
+          "longitude": 106.43676
+      },
+      {
+          "sysTime": "1693885025000",
+          "latitude": 29.78061,
+          "direction": 169.7,
+          "carSpeed": 89.0,
+          "longitude": 106.43627
+      },
+      {
+          "sysTime": "1693885035000",
+          "latitude": 29.78084,
+          "direction": 177.9,
+          "carSpeed": 89.0,
+          "longitude": 106.43577
+      },
+      {
+          "sysTime": "1693885046000",
+          "latitude": 29.78141,
+          "direction": 103.5,
+          "carSpeed": 89.0,
+          "longitude": 106.43459
+      },
+      {
+          "sysTime": "1693885056000",
+          "latitude": 29.78332,
+          "direction": 100.5,
+          "carSpeed": 89.0,
+          "longitude": 106.43065
+      },
+      {
+          "sysTime": "1693885066000",
+          "latitude": 29.78336,
+          "direction": 267.0,
+          "carSpeed": 89.0,
+          "longitude": 106.43057
+      },
+      {
+          "sysTime": "1693885077000",
+          "latitude": 29.7839,
+          "direction": 27.8,
+          "carSpeed": 89.0,
+          "longitude": 106.42943
+      },
+      {
+          "sysTime": "1693885087000",
+          "latitude": 29.78553,
+          "direction": 202.0,
+          "carSpeed": 89.0,
+          "longitude": 106.42609
+      },
+      {
+          "sysTime": "1693885098000",
+          "latitude": 29.78727,
+          "direction": 46.3,
+          "carSpeed": 89.0,
+          "longitude": 106.42247
+      },
+      {
+          "sysTime": "1693885108000",
+          "latitude": 29.78786,
+          "direction": 154.4,
+          "carSpeed": 89.0,
+          "longitude": 106.42125
+      },
+      {
+          "sysTime": "1693885119000",
+          "latitude": 29.78859,
+          "direction": 244.2,
+          "carSpeed": 89.0,
+          "longitude": 106.41971
+      },
+      {
+          "sysTime": "1693885129000",
+          "latitude": 29.78879,
+          "direction": 201.7,
+          "carSpeed": 89.0,
+          "longitude": 106.4193
+      },
+      {
+          "sysTime": "1693885140000",
+          "latitude": 29.7901,
+          "direction": 324.5,
+          "carSpeed": 89.0,
+          "longitude": 106.41657
+      },
+      {
+          "sysTime": "1693885150000",
+          "latitude": 29.79259,
+          "direction": 166.5,
+          "carSpeed": 89.0,
+          "longitude": 106.4114
+      },
+      {
+          "sysTime": "1693885160000",
+          "latitude": 29.79383,
+          "direction": 153.2,
+          "carSpeed": 89.0,
+          "longitude": 106.40895
+      },
+      {
+          "sysTime": "1693885171000",
+          "latitude": 29.79492,
+          "direction": 276.1,
+          "carSpeed": 89.0,
+          "longitude": 106.40756
+      },
+      {
+          "sysTime": "1693885181000",
+          "latitude": 29.79523,
+          "direction": 256.8,
+          "carSpeed": 89.0,
+          "longitude": 106.40732
+      },
+      {
+          "sysTime": "1693885192000",
+          "latitude": 29.79598,
+          "direction": 1.6,
+          "carSpeed": 89.0,
+          "longitude": 106.40691
+      },
+      {
+          "sysTime": "1693885202000",
+          "latitude": 29.79655,
+          "direction": 25.5,
+          "carSpeed": 89.0,
+          "longitude": 106.4067
+      },
+      {
+          "sysTime": "1693885213000",
+          "latitude": 29.79898,
+          "direction": 228.4,
+          "carSpeed": 89.0,
+          "longitude": 106.40615
+      },
+      {
+          "sysTime": "1693885223000",
+          "latitude": 29.80022,
+          "direction": 193.4,
+          "carSpeed": 89.0,
+          "longitude": 106.40586
+      },
+      {
+          "sysTime": "1693885234000",
+          "latitude": 29.80067,
+          "direction": 274.5,
+          "carSpeed": 89.0,
+          "longitude": 106.40575
+      },
+      {
+          "sysTime": "1693885244000",
+          "latitude": 29.80282,
+          "direction": 64.5,
+          "carSpeed": 89.0,
+          "longitude": 106.40532
+      },
+      {
+          "sysTime": "1693885254000",
+          "latitude": 29.80332,
+          "direction": 270.0,
+          "carSpeed": 89.0,
+          "longitude": 106.40534
+      },
+      {
+          "sysTime": "1693885265000",
+          "latitude": 29.80372,
+          "direction": 199.1,
+          "carSpeed": 89.0,
+          "longitude": 106.40538
+      },
+      {
+          "sysTime": "1693885275000",
+          "latitude": 29.80655,
+          "direction": 337.5,
+          "carSpeed": 89.0,
+          "longitude": 106.40601
+      },
+      {
+          "sysTime": "1693885286000",
+          "latitude": 29.80847,
+          "direction": 245.7,
+          "carSpeed": 89.0,
+          "longitude": 106.40626
+      },
+      {
+          "sysTime": "1693885296000",
+          "latitude": 29.81151,
+          "direction": 294.5,
+          "carSpeed": 89.0,
+          "longitude": 106.40579
+      },
+      {
+          "sysTime": "1693885307000",
+          "latitude": 29.81215,
+          "direction": 260.0,
+          "carSpeed": 89.0,
+          "longitude": 106.40565
+      },
+      {
+          "sysTime": "1693885317000",
+          "latitude": 29.81225,
+          "direction": 287.7,
+          "carSpeed": 89.0,
+          "longitude": 106.40564
+      },
+      {
+          "sysTime": "1693885328000",
+          "latitude": 29.81238,
+          "direction": 334.7,
+          "carSpeed": 89.0,
+          "longitude": 106.4056
+      },
+      {
+          "sysTime": "1693885338000",
+          "latitude": 29.81384,
+          "direction": 260.3,
+          "carSpeed": 89.0,
+          "longitude": 106.40552
+      },
+      {
+          "sysTime": "1693885348000",
+          "latitude": 29.81517,
+          "direction": 118.6,
+          "carSpeed": 89.0,
+          "longitude": 106.40572
+      },
+      {
+          "sysTime": "1693885359000",
+          "latitude": 29.81538,
+          "direction": 205.3,
+          "carSpeed": 89.0,
+          "longitude": 106.40578
+      },
+      {
+          "sysTime": "1693885369000",
+          "latitude": 29.81688,
+          "direction": 41.7,
+          "carSpeed": 89.0,
+          "longitude": 106.40614
+      },
+      {
+          "sysTime": "1693885380000",
+          "latitude": 29.81729,
+          "direction": 336.3,
+          "carSpeed": 89.0,
+          "longitude": 106.40626
+      },
+      {
+          "sysTime": "1693885390000",
+          "latitude": 29.8197,
+          "direction": 189.6,
+          "carSpeed": 89.0,
+          "longitude": 106.40684
+      },
+      {
+          "sysTime": "1693885401000",
+          "latitude": 29.8236,
+          "direction": 13.4,
+          "carSpeed": 89.0,
+          "longitude": 106.40779
+      },
+      {
+          "sysTime": "1693885411000",
+          "latitude": 29.82625,
+          "direction": 133.3,
+          "carSpeed": 89.0,
+          "longitude": 106.40844
+      },
+      {
+          "sysTime": "1693885422000",
+          "latitude": 29.82821,
+          "direction": 103.7,
+          "carSpeed": 89.0,
+          "longitude": 106.40894
+      },
+      {
+          "sysTime": "1693885432000",
+          "latitude": 29.82866,
+          "direction": 113.0,
+          "carSpeed": 89.0,
+          "longitude": 106.40909
+      },
+      {
+          "sysTime": "1693885442000",
+          "latitude": 29.83005,
+          "direction": 21.7,
+          "carSpeed": 89.0,
+          "longitude": 106.40972
+      },
+      {
+          "sysTime": "1693885453000",
+          "latitude": 29.83151,
+          "direction": 72.1,
+          "carSpeed": 89.0,
+          "longitude": 106.41079
+      },
+      {
+          "sysTime": "1693885463000",
+          "latitude": 29.83174,
+          "direction": 323.5,
+          "carSpeed": 89.0,
+          "longitude": 106.41102
+      },
+      {
+          "sysTime": "1693885474000",
+          "latitude": 29.83292,
+          "direction": 88.7,
+          "carSpeed": 89.0,
+          "longitude": 106.41223
+      },
+      {
+          "sysTime": "1693885485000",
+          "latitude": 29.83311,
+          "direction": 238.6,
+          "carSpeed": 89.0,
+          "longitude": 106.41242
+      },
+      {
+          "sysTime": "1693885495000",
+          "latitude": 29.83406,
+          "direction": 188.3,
+          "carSpeed": 89.0,
+          "longitude": 106.41346
+      },
+      {
+          "sysTime": "1693885505000",
+          "latitude": 29.8349,
+          "direction": 307.3,
+          "carSpeed": 89.0,
+          "longitude": 106.41436
+      },
+      {
+          "sysTime": "1693885516000",
+          "latitude": 29.8356,
+          "direction": 87.9,
+          "carSpeed": 89.0,
+          "longitude": 106.41512
+      },
+      {
+          "sysTime": "1693885526000",
+          "latitude": 29.83583,
+          "direction": 213.0,
+          "carSpeed": 89.0,
+          "longitude": 106.41536
+      },
+      {
+          "sysTime": "1693885537000",
+          "latitude": 29.83631,
+          "direction": 221.5,
+          "carSpeed": 89.0,
+          "longitude": 106.41587
+      },
+      {
+          "sysTime": "1693885547000",
+          "latitude": 29.83981,
+          "direction": 99.2,
+          "carSpeed": 89.0,
+          "longitude": 106.41964
+      },
+      {
+          "sysTime": "1693885558000",
+          "latitude": 29.84021,
+          "direction": 191.8,
+          "carSpeed": 89.0,
+          "longitude": 106.42015
+      },
+      {
+          "sysTime": "1693885568000",
+          "latitude": 29.84088,
+          "direction": 302.9,
+          "carSpeed": 89.0,
+          "longitude": 106.42101
+      },
+      {
+          "sysTime": "1693885579000",
+          "latitude": 29.84106,
+          "direction": 338.4,
+          "carSpeed": 89.0,
+          "longitude": 106.42122
+      },
+      {
+          "sysTime": "1693885589000",
+          "latitude": 29.84252,
+          "direction": 15.3,
+          "carSpeed": 89.0,
+          "longitude": 106.42254
+      },
+      {
+          "sysTime": "1693885599000",
+          "latitude": 29.84563,
+          "direction": 105.2,
+          "carSpeed": 89.0,
+          "longitude": 106.42589
+      },
+      {
+          "sysTime": "1693885610000",
+          "latitude": 29.85008,
+          "direction": 267.8,
+          "carSpeed": 89.0,
+          "longitude": 106.43065
+      },
+      {
+          "sysTime": "1693885621000",
+          "latitude": 29.85396,
+          "direction": 264.4,
+          "carSpeed": 89.0,
+          "longitude": 106.43482
+      },
+      {
+          "sysTime": "1693885631000",
+          "latitude": 29.85499,
+          "direction": 122.9,
+          "carSpeed": 89.0,
+          "longitude": 106.43582
+      },
+      {
+          "sysTime": "1693885642000",
+          "latitude": 29.85605,
+          "direction": 21.2,
+          "carSpeed": 89.0,
+          "longitude": 106.43649
+      },
+      {
+          "sysTime": "1693885652000",
+          "latitude": 29.85632,
+          "direction": 93.2,
+          "carSpeed": 89.0,
+          "longitude": 106.43664
+      },
+      {
+          "sysTime": "1693885663000",
+          "latitude": 29.85686,
+          "direction": 301.9,
+          "carSpeed": 89.0,
+          "longitude": 106.4369
+      },
+      {
+          "sysTime": "1693885673000",
+          "latitude": 29.85758,
+          "direction": 118.6,
+          "carSpeed": 89.0,
+          "longitude": 106.43708
+      },
+      {
+          "sysTime": "1693885683000",
+          "latitude": 29.85833,
+          "direction": 179.7,
+          "carSpeed": 89.0,
+          "longitude": 106.43713
+      },
+      {
+          "sysTime": "1693885694000",
+          "latitude": 29.85838,
+          "direction": 343.9,
+          "carSpeed": 89.0,
+          "longitude": 106.43714
+      },
+      {
+          "sysTime": "1693885704000",
+          "latitude": 29.85977,
+          "direction": 83.1,
+          "carSpeed": 89.0,
+          "longitude": 106.43696
+      },
+      {
+          "sysTime": "1693885715000",
+          "latitude": 29.86104,
+          "direction": 119.1,
+          "carSpeed": 89.0,
+          "longitude": 106.43641
+      },
+      {
+          "sysTime": "1693885725000",
+          "latitude": 29.86216,
+          "direction": 124.8,
+          "carSpeed": 89.0,
+          "longitude": 106.43563
+      },
+      {
+          "sysTime": "1693885736000",
+          "latitude": 29.8648,
+          "direction": 176.8,
+          "carSpeed": 89.0,
+          "longitude": 106.43324
+      },
+      {
+          "sysTime": "1693885746000",
+          "latitude": 29.87037,
+          "direction": 86.4,
+          "carSpeed": 89.0,
+          "longitude": 106.42805
+      },
+      {
+          "sysTime": "1693885757000",
+          "latitude": 29.87174,
+          "direction": 243.4,
+          "carSpeed": 89.0,
+          "longitude": 106.42679
+      },
+      {
+          "sysTime": "1693885767000",
+          "latitude": 29.87215,
+          "direction": 228.2,
+          "carSpeed": 89.0,
+          "longitude": 106.4264
+      },
+      {
+          "sysTime": "1693885778000",
+          "latitude": 29.87254,
+          "direction": 281.7,
+          "carSpeed": 89.0,
+          "longitude": 106.42604
+      },
+      {
+          "sysTime": "1693885788000",
+          "latitude": 29.87359,
+          "direction": 115.4,
+          "carSpeed": 89.0,
+          "longitude": 106.42507
+      },
+      {
+          "sysTime": "1693885798000",
+          "latitude": 29.87391,
+          "direction": 171.6,
+          "carSpeed": 89.0,
+          "longitude": 106.42477
+      },
+      {
+          "sysTime": "1693885809000",
+          "latitude": 29.87504,
+          "direction": 202.4,
+          "carSpeed": 89.0,
+          "longitude": 106.42373
+      },
+      {
+          "sysTime": "1693885819000",
+          "latitude": 29.8798,
+          "direction": 101.0,
+          "carSpeed": 89.0,
+          "longitude": 106.41937
+      },
+      {
+          "sysTime": "1693885830000",
+          "latitude": 29.88086,
+          "direction": 181.2,
+          "carSpeed": 89.0,
+          "longitude": 106.41841
+      },
+      {
+          "sysTime": "1693885840000",
+          "latitude": 29.8816,
+          "direction": 320.4,
+          "carSpeed": 89.0,
+          "longitude": 106.41773
+      },
+      {
+          "sysTime": "1693885851000",
+          "latitude": 29.88277,
+          "direction": 149.1,
+          "carSpeed": 89.0,
+          "longitude": 106.41667
+      },
+      {
+          "sysTime": "1693885861000",
+          "latitude": 29.88287,
+          "direction": 298.4,
+          "carSpeed": 89.0,
+          "longitude": 106.41657
+      },
+      {
+          "sysTime": "1693885872000",
+          "latitude": 29.88308,
+          "direction": 206.6,
+          "carSpeed": 89.0,
+          "longitude": 106.41637
+      },
+      {
+          "sysTime": "1693885882000",
+          "latitude": 29.88342,
+          "direction": 46.9,
+          "carSpeed": 89.0,
+          "longitude": 106.41603
+      },
+      {
+          "sysTime": "1693885892000",
+          "latitude": 29.88388,
+          "direction": 66.1,
+          "carSpeed": 89.0,
+          "longitude": 106.41553
+      },
+      {
+          "sysTime": "1693885903000",
+          "latitude": 29.88416,
+          "direction": 235.5,
+          "carSpeed": 89.0,
+          "longitude": 106.41514
+      },
+      {
+          "sysTime": "1693885913000",
+          "latitude": 29.88493,
+          "direction": 68.4,
+          "carSpeed": 89.0,
+          "longitude": 106.41385
+      },
+      {
+          "sysTime": "1693885924000",
+          "latitude": 29.88659,
+          "direction": 175.7,
+          "carSpeed": 89.0,
+          "longitude": 106.41037
+      },
+      {
+          "sysTime": "1693885934000",
+          "latitude": 29.88839,
+          "direction": 226.8,
+          "carSpeed": 89.0,
+          "longitude": 106.40876
+      },
+      {
+          "sysTime": "1693885945000",
+          "latitude": 29.89031,
+          "direction": 26.3,
+          "carSpeed": 89.0,
+          "longitude": 106.40804
+      },
+      {
+          "sysTime": "1693885955000",
+          "latitude": 29.89298,
+          "direction": 231.1,
+          "carSpeed": 89.0,
+          "longitude": 106.40738
+      },
+      {
+          "sysTime": "1693885966000",
+          "latitude": 29.896,
+          "direction": 281.8,
+          "carSpeed": 89.0,
+          "longitude": 106.40651
+      },
+      {
+          "sysTime": "1693885976000",
+          "latitude": 29.89653,
+          "direction": 109.0,
+          "carSpeed": 89.0,
+          "longitude": 106.40624
+      },
+      {
+          "sysTime": "1693885986000",
+          "latitude": 29.89673,
+          "direction": 10.4,
+          "carSpeed": 89.0,
+          "longitude": 106.40614
+      },
+      {
+          "sysTime": "1693885997000",
+          "latitude": 29.89812,
+          "direction": 82.4,
+          "carSpeed": 89.0,
+          "longitude": 106.40493
+      },
+      {
+          "sysTime": "1693886007000",
+          "latitude": 29.89866,
+          "direction": 19.8,
+          "carSpeed": 89.0,
+          "longitude": 106.4041
+      },
+      {
+          "sysTime": "1693886018000",
+          "latitude": 29.89938,
+          "direction": 79.8,
+          "carSpeed": 89.0,
+          "longitude": 106.40257
+      },
+      {
+          "sysTime": "1693886028000",
+          "latitude": 29.8998,
+          "direction": 313.4,
+          "carSpeed": 89.0,
+          "longitude": 106.40167
+      },
+      {
+          "sysTime": "1693886039000",
+          "latitude": 29.90061,
+          "direction": 143.8,
+          "carSpeed": 89.0,
+          "longitude": 106.39991
+      },
+      {
+          "sysTime": "1693886049000",
+          "latitude": 29.90189,
+          "direction": 104.8,
+          "carSpeed": 89.0,
+          "longitude": 106.39711
+      },
+      {
+          "sysTime": "1693886060000",
+          "latitude": 29.90191,
+          "direction": 155.5,
+          "carSpeed": 89.0,
+          "longitude": 106.39708
+      },
+      {
+          "sysTime": "1693886070000",
+          "latitude": 29.90256,
+          "direction": 69.2,
+          "carSpeed": 89.0,
+          "longitude": 106.3958
+      },
+      {
+          "sysTime": "1693886080000",
+          "latitude": 29.90448,
+          "direction": 182.5,
+          "carSpeed": 89.0,
+          "longitude": 106.39285
+      },
+      {
+          "sysTime": "1693886091000",
+          "latitude": 29.90501,
+          "direction": 271.1,
+          "carSpeed": 89.0,
+          "longitude": 106.39225
+      },
+      {
+          "sysTime": "1693886101000",
+          "latitude": 29.90584,
+          "direction": 126.6,
+          "carSpeed": 89.0,
+          "longitude": 106.39143
+      },
+      {
+          "sysTime": "1693886112000",
+          "latitude": 29.90653,
+          "direction": 338.1,
+          "carSpeed": 89.0,
+          "longitude": 106.39082
+      },
+      {
+          "sysTime": "1693886122000",
+          "latitude": 29.90768,
+          "direction": 231.0,
+          "carSpeed": 89.0,
+          "longitude": 106.39005
+      },
+      {
+          "sysTime": "1693886133000",
+          "latitude": 29.90955,
+          "direction": 270.0,
+          "carSpeed": 89.0,
+          "longitude": 106.38941
+      },
+      {
+          "sysTime": "1693886143000",
+          "latitude": 29.91088,
+          "direction": 187.4,
+          "carSpeed": 89.0,
+          "longitude": 106.38939
+      },
+      {
+          "sysTime": "1693886154000",
+          "latitude": 29.91319,
+          "direction": 166.8,
+          "carSpeed": 89.0,
+          "longitude": 106.38979
+      },
+      {
+          "sysTime": "1693886164000",
+          "latitude": 29.91856,
+          "direction": 172.9,
+          "carSpeed": 89.0,
+          "longitude": 106.39062
+      },
+      {
+          "sysTime": "1693886174000",
+          "latitude": 29.91904,
+          "direction": 4.1,
+          "carSpeed": 89.0,
+          "longitude": 106.39059
+      },
+      {
+          "sysTime": "1693886185000",
+          "latitude": 29.91914,
+          "direction": 86.5,
+          "carSpeed": 89.0,
+          "longitude": 106.39057
+      },
+      {
+          "sysTime": "1693886195000",
+          "latitude": 29.9205,
+          "direction": 303.9,
+          "carSpeed": 89.0,
+          "longitude": 106.39022
+      },
+      {
+          "sysTime": "1693886206000",
+          "latitude": 29.92239,
+          "direction": 333.7,
+          "carSpeed": 89.0,
+          "longitude": 106.38933
+      },
+      {
+          "sysTime": "1693886216000",
+          "latitude": 29.92423,
+          "direction": 82.8,
+          "carSpeed": 89.0,
+          "longitude": 106.38838
+      },
+      {
+          "sysTime": "1693886227000",
+          "latitude": 29.92894,
+          "direction": 246.5,
+          "carSpeed": 89.0,
+          "longitude": 106.38603
+      },
+      {
+          "sysTime": "1693886237000",
+          "latitude": 29.92915,
+          "direction": 254.9,
+          "carSpeed": 89.0,
+          "longitude": 106.38593
+      },
+      {
+          "sysTime": "1693886248000",
+          "latitude": 29.92935,
+          "direction": 52.4,
+          "carSpeed": 89.0,
+          "longitude": 106.38582
+      },
+      {
+          "sysTime": "1693886258000",
+          "latitude": 29.92968,
+          "direction": 304.2,
+          "carSpeed": 89.0,
+          "longitude": 106.38563
+      },
+      {
+          "sysTime": "1693886268000",
+          "latitude": 29.93007,
+          "direction": 275.5,
+          "carSpeed": 89.0,
+          "longitude": 106.38537
+      },
+      {
+          "sysTime": "1693886279000",
+          "latitude": 29.93086,
+          "direction": 267.3,
+          "carSpeed": 89.0,
+          "longitude": 106.38469
+      },
+      {
+          "sysTime": "1693886289000",
+          "latitude": 29.93095,
+          "direction": 252.3,
+          "carSpeed": 89.0,
+          "longitude": 106.38458
+      },
+      {
+          "sysTime": "1693886300000",
+          "latitude": 29.93101,
+          "direction": 98.4,
+          "carSpeed": 89.0,
+          "longitude": 106.38452
+      },
+      {
+          "sysTime": "1693886310000",
+          "latitude": 29.93156,
+          "direction": 305.6,
+          "carSpeed": 89.0,
+          "longitude": 106.38381
+      },
+      {
+          "sysTime": "1693886321000",
+          "latitude": 29.93184,
+          "direction": 164.6,
+          "carSpeed": 89.0,
+          "longitude": 106.38334
+      },
+      {
+          "sysTime": "1693886331000",
+          "latitude": 29.93195,
+          "direction": 134.4,
+          "carSpeed": 89.0,
+          "longitude": 106.38312
+      },
+      {
+          "sysTime": "1693886342000",
+          "latitude": 29.93224,
+          "direction": 217.8,
+          "carSpeed": 89.0,
+          "longitude": 106.38247
+      },
+      {
+          "sysTime": "1693886352000",
+          "latitude": 29.93232,
+          "direction": 199.3,
+          "carSpeed": 89.0,
+          "longitude": 106.38223
+      },
+      {
+          "sysTime": "1693886362000",
+          "latitude": 29.93243,
+          "direction": 95.6,
+          "carSpeed": 89.0,
+          "longitude": 106.38189
+      },
+      {
+          "sysTime": "1693886373000",
+          "latitude": 29.9326,
+          "direction": 91.8,
+          "carSpeed": 89.0,
+          "longitude": 106.38124
+      },
+      {
+          "sysTime": "1693886383000",
+          "latitude": 29.93288,
+          "direction": 248.9,
+          "carSpeed": 89.0,
+          "longitude": 106.37989
+      },
+      {
+          "sysTime": "1693886394000",
+          "latitude": 29.93323,
+          "direction": 317.1,
+          "carSpeed": 89.0,
+          "longitude": 106.37823
+      },
+      {
+          "sysTime": "1693886404000",
+          "latitude": 29.93358,
+          "direction": 76.4,
+          "carSpeed": 89.0,
+          "longitude": 106.37662
+      },
+      {
+          "sysTime": "1693886415000",
+          "latitude": 29.93358,
+          "direction": 164.9,
+          "carSpeed": 89.0,
+          "longitude": 106.37658
+      },
+      {
+          "sysTime": "1693886425000",
+          "latitude": 29.93384,
+          "direction": 79.9,
+          "carSpeed": 89.0,
+          "longitude": 106.37538
+      },
+      {
+          "sysTime": "1693886436000",
+          "latitude": 29.93449,
+          "direction": 115.8,
+          "carSpeed": 89.0,
+          "longitude": 106.37324
+      },
+      {
+          "sysTime": "1693886446000",
+          "latitude": 29.93527,
+          "direction": 295.5,
+          "carSpeed": 89.0,
+          "longitude": 106.37172
+      },
+      {
+          "sysTime": "1693886456000",
+          "latitude": 29.93576,
+          "direction": 280.3,
+          "carSpeed": 89.0,
+          "longitude": 106.37099
+      },
+      {
+          "sysTime": "1693886467000",
+          "latitude": 29.93597,
+          "direction": 88.0,
+          "carSpeed": 89.0,
+          "longitude": 106.37072
+      },
+      {
+          "sysTime": "1693886477000",
+          "latitude": 29.9371,
+          "direction": 4.4,
+          "carSpeed": 89.0,
+          "longitude": 106.36917
+      },
+      {
+          "sysTime": "1693886488000",
+          "latitude": 29.93937,
+          "direction": 158.3,
+          "carSpeed": 89.0,
+          "longitude": 106.36622
+      },
+      {
+          "sysTime": "1693886498000",
+          "latitude": 29.94058,
+          "direction": 348.2,
+          "carSpeed": 89.0,
+          "longitude": 106.36455
+      },
+      {
+          "sysTime": "1693886509000",
+          "latitude": 29.94145,
+          "direction": 60.0,
+          "carSpeed": 89.0,
+          "longitude": 106.36311
+      },
+      {
+          "sysTime": "1693886519000",
+          "latitude": 29.94176,
+          "direction": 213.4,
+          "carSpeed": 89.0,
+          "longitude": 106.36259
+      },
+      {
+          "sysTime": "1693886530000",
+          "latitude": 29.94316,
+          "direction": 226.9,
+          "carSpeed": 89.0,
+          "longitude": 106.35962
+      },
+      {
+          "sysTime": "1693886540000",
+          "latitude": 29.94399,
+          "direction": 195.2,
+          "carSpeed": 89.0,
+          "longitude": 106.358
+      },
+      {
+          "sysTime": "1693886550000",
+          "latitude": 29.94425,
+          "direction": 165.1,
+          "carSpeed": 89.0,
+          "longitude": 106.35756
+      },
+      {
+          "sysTime": "1693886561000",
+          "latitude": 29.945,
+          "direction": 36.6,
+          "carSpeed": 89.0,
+          "longitude": 106.3566
+      },
+      {
+          "sysTime": "1693886571000",
+          "latitude": 29.94556,
+          "direction": 359.5,
+          "carSpeed": 89.0,
+          "longitude": 106.35611
+      },
+      {
+          "sysTime": "1693886582000",
+          "latitude": 29.94609,
+          "direction": 133.2,
+          "carSpeed": 89.0,
+          "longitude": 106.35567
+      },
+      {
+          "sysTime": "1693886592000",
+          "latitude": 29.94697,
+          "direction": 184.8,
+          "carSpeed": 89.0,
+          "longitude": 106.35498
+      },
+      {
+          "sysTime": "1693886603000",
+          "latitude": 29.94735,
+          "direction": 261.0,
+          "carSpeed": 89.0,
+          "longitude": 106.35468
+      },
+      {
+          "sysTime": "1693886613000",
+          "latitude": 29.95019,
+          "direction": 199.6,
+          "carSpeed": 89.0,
+          "longitude": 106.35254
+      },
+      {
+          "sysTime": "1693886624000",
+          "latitude": 29.95176,
+          "direction": 189.3,
+          "carSpeed": 89.0,
+          "longitude": 106.35071
+      },
+      {
+          "sysTime": "1693886634000",
+          "latitude": 29.95291,
+          "direction": 248.1,
+          "carSpeed": 89.0,
+          "longitude": 106.34848
+      },
+      {
+          "sysTime": "1693886644000",
+          "latitude": 29.95486,
+          "direction": 176.9,
+          "carSpeed": 89.0,
+          "longitude": 106.3445
+      },
+      {
+          "sysTime": "1693886655000",
+          "latitude": 29.95488,
+          "direction": 84.1,
+          "carSpeed": 89.0,
+          "longitude": 106.34448
+      },
+      {
+          "sysTime": "1693886665000",
+          "latitude": 29.95577,
+          "direction": 325.4,
+          "carSpeed": 89.0,
+          "longitude": 106.34291
+      },
+      {
+          "sysTime": "1693886676000",
+          "latitude": 29.95733,
+          "direction": 321.9,
+          "carSpeed": 89.0,
+          "longitude": 106.34058
+      },
+      {
+          "sysTime": "1693886686000",
+          "latitude": 29.95877,
+          "direction": 203.7,
+          "carSpeed": 89.0,
+          "longitude": 106.3385
+      },
+      {
+          "sysTime": "1693886697000",
+          "latitude": 29.96114,
+          "direction": 13.2,
+          "carSpeed": 89.0,
+          "longitude": 106.33501
+      },
+      {
+          "sysTime": "1693886707000",
+          "latitude": 29.96151,
+          "direction": 70.7,
+          "carSpeed": 89.0,
+          "longitude": 106.33418
+      },
+      {
+          "sysTime": "1693886718000",
+          "latitude": 29.96173,
+          "direction": 91.8,
+          "carSpeed": 89.0,
+          "longitude": 106.33295
+      },
+      {
+          "sysTime": "1693886728000",
+          "latitude": 29.96175,
+          "direction": 74.9,
+          "carSpeed": 89.0,
+          "longitude": 106.33247
+      },
+      {
+          "sysTime": "1693886738000",
+          "latitude": 29.96156,
+          "direction": 283.9,
+          "carSpeed": 89.0,
+          "longitude": 106.33074
+      },
+      {
+          "sysTime": "1693886749000",
+          "latitude": 29.96105,
+          "direction": 46.9,
+          "carSpeed": 89.0,
+          "longitude": 106.32751
+      },
+      {
+          "sysTime": "1693886759000",
+          "latitude": 29.96105,
+          "direction": 10.1,
+          "carSpeed": 89.0,
+          "longitude": 106.32751
+      },
+      {
+          "sysTime": "1693886770000",
+          "latitude": 29.96088,
+          "direction": 138.9,
+          "carSpeed": 89.0,
+          "longitude": 106.32581
+      },
+      {
+          "sysTime": "1693886780000",
+          "latitude": 29.96076,
+          "direction": 253.8,
+          "carSpeed": 89.0,
+          "longitude": 106.32439
+      },
+      {
+          "sysTime": "1693886791000",
+          "latitude": 29.96091,
+          "direction": 327.0,
+          "carSpeed": 89.0,
+          "longitude": 106.32386
+      },
+      {
+          "sysTime": "1693886801000",
+          "latitude": 29.96124,
+          "direction": 311.0,
+          "carSpeed": 89.0,
+          "longitude": 106.32349
+      },
+      {
+          "sysTime": "1693886812000",
+          "latitude": 29.96162,
+          "direction": 334.6,
+          "carSpeed": 89.0,
+          "longitude": 106.32335
+      },
+      {
+          "sysTime": "1693886822000",
+          "latitude": 29.96206,
+          "direction": 324.4,
+          "carSpeed": 89.0,
+          "longitude": 106.32337
+      },
+      {
+          "sysTime": "1693886832000",
+          "latitude": 29.96295,
+          "direction": 299.7,
+          "carSpeed": 89.0,
+          "longitude": 106.32391
+      },
+      {
+          "sysTime": "1693886843000",
+          "latitude": 29.96351,
+          "direction": 117.1,
+          "carSpeed": 89.0,
+          "longitude": 106.32438
+      },
+      {
+          "sysTime": "1693886853000",
+          "latitude": 29.96525,
+          "direction": 279.1,
+          "carSpeed": 89.0,
+          "longitude": 106.32636
+      },
+      {
+          "sysTime": "1693886864000",
+          "latitude": 29.96525,
+          "direction": 192.2,
+          "carSpeed": 89.0,
+          "longitude": 106.32636
+      },
+      {
+          "sysTime": "1693886874000",
+          "latitude": 29.96562,
+          "direction": 244.9,
+          "carSpeed": 89.0,
+          "longitude": 106.32695
+      },
+      {
+          "sysTime": "1693886885000",
+          "latitude": 29.96588,
+          "direction": 78.6,
+          "carSpeed": 89.0,
+          "longitude": 106.32735
+      },
+      {
+          "sysTime": "1693886895000",
+          "latitude": 29.96588,
+          "direction": 329.3,
+          "carSpeed": 89.0,
+          "longitude": 106.32735
+      },
+      {
+          "sysTime": "1693886906000",
+          "latitude": 29.96596,
+          "direction": 329.2,
+          "carSpeed": 89.0,
+          "longitude": 106.3275
+      },
+      {
+          "sysTime": "1693886916000",
+          "latitude": 29.96596,
+          "direction": 181.2,
+          "carSpeed": 89.0,
+          "longitude": 106.3275
+      },
+      {
+          "sysTime": "1693886927000",
+          "latitude": 29.9661,
+          "direction": 199.8,
+          "carSpeed": 89.0,
+          "longitude": 106.32769
+      },
+      {
+          "sysTime": "1693886937000",
+          "latitude": 29.96615,
+          "direction": 322.3,
+          "carSpeed": 89.0,
+          "longitude": 106.32773
+      },
+      {
+          "sysTime": "1693886948000",
+          "latitude": 29.96626,
+          "direction": 267.0,
+          "carSpeed": 89.0,
+          "longitude": 106.32773
+      },
+      {
+          "sysTime": "1693886958000",
+          "latitude": 29.96792,
+          "direction": 347.9,
+          "carSpeed": 89.0,
+          "longitude": 106.32662
+      },
+      {
+          "sysTime": "1693886968000",
+          "latitude": 29.96827,
+          "direction": 117.5,
+          "carSpeed": 89.0,
+          "longitude": 106.32638
+      },
+      {
+          "sysTime": "1693886979000",
+          "latitude": 29.96905,
+          "direction": 247.1,
+          "carSpeed": 89.0,
+          "longitude": 106.32582
+      },
+      {
+          "sysTime": "1693886989000",
+          "latitude": 29.96905,
+          "direction": 276.8,
+          "carSpeed": 89.0,
+          "longitude": 106.32582
+      },
+      {
+          "sysTime": "1693887000000",
+          "latitude": 29.96915,
+          "direction": 263.0,
+          "carSpeed": 89.0,
+          "longitude": 106.32572
+      },
+      {
+          "sysTime": "1693887010000",
+          "latitude": 29.96915,
+          "direction": 31.7,
+          "carSpeed": 89.0,
+          "longitude": 106.32572
+      },
+      {
+          "sysTime": "1693887021000",
+          "latitude": 29.96922,
+          "direction": 330.0,
+          "carSpeed": 89.0,
+          "longitude": 106.32554
+      },
+      {
+          "sysTime": "1693887031000",
+          "latitude": 29.96905,
+          "direction": 318.3,
+          "carSpeed": 89.0,
+          "longitude": 106.32423
+      },
+      {
+          "sysTime": "1693887042000",
+          "latitude": 29.96899,
+          "direction": 244.3,
+          "carSpeed": 89.0,
+          "longitude": 106.32236
+      },
+      {
+          "sysTime": "1693887052000",
+          "latitude": 29.969,
+          "direction": 351.2,
+          "carSpeed": 89.0,
+          "longitude": 106.31845
+      },
+      {
+          "sysTime": "1693887062000",
+          "latitude": 29.96899,
+          "direction": 87.6,
+          "carSpeed": 89.0,
+          "longitude": 106.31663
+      },
+      {
+          "sysTime": "1693887073000",
+          "latitude": 29.96898,
+          "direction": 256.4,
+          "carSpeed": 89.0,
+          "longitude": 106.31651
+      },
+      {
+          "sysTime": "1693887083000",
+          "latitude": 29.96879,
+          "direction": 345.0,
+          "carSpeed": 89.0,
+          "longitude": 106.31502
+      },
+      {
+          "sysTime": "1693887094000",
+          "latitude": 29.96834,
+          "direction": 289.4,
+          "carSpeed": 89.0,
+          "longitude": 106.31334
+      },
+      {
+          "sysTime": "1693887104000",
+          "latitude": 29.96834,
+          "direction": 179.9,
+          "carSpeed": 89.0,
+          "longitude": 106.31334
+      },
+      {
+          "sysTime": "1693887115000",
+          "latitude": 29.9635,
+          "direction": 185.1,
+          "carSpeed": 89.0,
+          "longitude": 106.29527
+      },
+      {
+          "sysTime": "1693887125000",
+          "latitude": 29.9635,
+          "direction": 26.1,
+          "carSpeed": 89.0,
+          "longitude": 106.29527
+      },
+      {
+          "sysTime": "1693887136000",
+          "latitude": 29.96335,
+          "direction": 142.8,
+          "carSpeed": 89.0,
+          "longitude": 106.29419
+      },
+      {
+          "sysTime": "1693887146000",
+          "latitude": 29.96344,
+          "direction": 32.5,
+          "carSpeed": 89.0,
+          "longitude": 106.2928
+      },
+      {
+          "sysTime": "1693887156000",
+          "latitude": 29.96356,
+          "direction": 182.2,
+          "carSpeed": 89.0,
+          "longitude": 106.29232
+      },
+      {
+          "sysTime": "1693887167000",
+          "latitude": 29.96367,
+          "direction": 210.2,
+          "carSpeed": 89.0,
+          "longitude": 106.2919
+      },
+      {
+          "sysTime": "1693887177000",
+          "latitude": 29.96406,
+          "direction": 296.5,
+          "carSpeed": 89.0,
+          "longitude": 106.29095
+      },
+      {
+          "sysTime": "1693887188000",
+          "latitude": 29.96501,
+          "direction": 259.8,
+          "carSpeed": 89.0,
+          "longitude": 106.28958
+      },
+      {
+          "sysTime": "1693887198000",
+          "latitude": 29.96501,
+          "direction": 72.1,
+          "carSpeed": 89.0,
+          "longitude": 106.28958
+      },
+      {
+          "sysTime": "1693887209000",
+          "latitude": 29.96544,
+          "direction": 329.0,
+          "carSpeed": 89.0,
+          "longitude": 106.28891
+      },
+      {
+          "sysTime": "1693887219000",
+          "latitude": 29.96772,
+          "direction": 344.6,
+          "carSpeed": 89.0,
+          "longitude": 106.28541
+      },
+      {
+          "sysTime": "1693887230000",
+          "latitude": 29.96863,
+          "direction": 199.1,
+          "carSpeed": 89.0,
+          "longitude": 106.284
+      },
+      {
+          "sysTime": "1693887240000",
+          "latitude": 29.96928,
+          "direction": 246.7,
+          "carSpeed": 89.0,
+          "longitude": 106.28299
+      },
+      {
+          "sysTime": "1693887250000",
+          "latitude": 29.96935,
+          "direction": 352.6,
+          "carSpeed": 89.0,
+          "longitude": 106.28287
+      },
+      {
+          "sysTime": "1693887261000",
+          "latitude": 29.97104,
+          "direction": 234.4,
+          "carSpeed": 89.0,
+          "longitude": 106.28026
+      },
+      {
+          "sysTime": "1693887271000",
+          "latitude": 29.9711,
+          "direction": 191.9,
+          "carSpeed": 89.0,
+          "longitude": 106.28019
+      },
+      {
+          "sysTime": "1693887282000",
+          "latitude": 29.97247,
+          "direction": 230.8,
+          "carSpeed": 89.0,
+          "longitude": 106.27805
+      },
+      {
+          "sysTime": "1693887292000",
+          "latitude": 29.97251,
+          "direction": 129.4,
+          "carSpeed": 89.0,
+          "longitude": 106.27797
+      },
+      {
+          "sysTime": "1693887303000",
+          "latitude": 29.97416,
+          "direction": 167.9,
+          "carSpeed": 89.0,
+          "longitude": 106.27541
+      },
+      {
+          "sysTime": "1693887313000",
+          "latitude": 29.97481,
+          "direction": 296.0,
+          "carSpeed": 89.0,
+          "longitude": 106.2744
+      },
+      {
+          "sysTime": "1693887324000",
+          "latitude": 29.97598,
+          "direction": 289.4,
+          "carSpeed": 89.0,
+          "longitude": 106.27264
+      },
+      {
+          "sysTime": "1693887334000",
+          "latitude": 29.97598,
+          "direction": 122.9,
+          "carSpeed": 89.0,
+          "longitude": 106.27264
+      },
+      {
+          "sysTime": "1693887344000",
+          "latitude": 29.97591,
+          "direction": 222.1,
+          "carSpeed": 89.0,
+          "longitude": 106.27258
+      },
+      {
+          "sysTime": "1693887355000",
+          "latitude": 29.97558,
+          "direction": 350.7,
+          "carSpeed": 89.0,
+          "longitude": 106.27231
+      },
+      {
+          "sysTime": "1693887365000",
+          "latitude": 29.97558,
+          "direction": 295.2,
+          "carSpeed": 89.0,
+          "longitude": 106.27231
+      },
+      {
+          "sysTime": "1693887376000",
+          "latitude": 29.97541,
+          "direction": 340.9,
+          "carSpeed": 89.0,
+          "longitude": 106.27216
+      },
+      {
+          "sysTime": "1693887386000",
+          "latitude": 29.97541,
+          "direction": 16.2,
+          "carSpeed": 89.0,
+          "longitude": 106.27216
+      },
+      {
+          "sysTime": "1693887397000",
+          "latitude": 29.97521,
+          "direction": 80.0,
+          "carSpeed": 89.0,
+          "longitude": 106.27239
+      },
+      {
+          "sysTime": "1693887407000",
+          "latitude": 29.97506,
+          "direction": 308.4,
+          "carSpeed": 89.0,
+          "longitude": 106.27262
+      },
+      {
+          "sysTime": "1693887418000",
+          "latitude": 29.97496,
+          "direction": 29.5,
+          "carSpeed": 89.0,
+          "longitude": 106.27256
+      },
+      {
+          "sysTime": "1693891929000",
+          "latitude": 29.97496,
+          "direction": 3.0,
+          "carSpeed": 0.0,
+          "longitude": 106.27256
+      }
+  ],
+  "alarmDtos": [],
+  "params": {
+      "did": "M010031543138",
+      "startTime": "1693883493000",
+      "endTime": "1693891929000",
+      "offSetTime": "1693891929500"
+  },
+  "traceDetailInfo": {
+      "day": "2023-09-05",
+      "week": "星期二",
+      "time": "11:11 - 13:32",
+      "distance": "50.0 km",
+      "durationTotal": "64 min",
+      "speedAverage": "21.0 km/h",
+      "startLatitude": 29.591424,
+      "startLongitude": 106.494672,
+      "endLatitude": 29.97496,
+      "endLongitude": 106.27256,
+      "outFireLatitude": 29.97496,
+      "outFireLongitude": 106.27256,
+      "fuelConsum": 6.5,
+      "speedMaximum": 13,
+      "gpsDistance": "50.3"
+  }
+}

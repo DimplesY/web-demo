@@ -7,8 +7,17 @@
 
 @include e(element) {
   color: blue;
+
+  @include m(modifier) {
+    color: green;
+  }
 }
 
-@include m(modifier) {
-  color: green;
+
+
+
+:root.dark {
+  --theme-background: #3c4463;
+  --theme-link-active-bg-color: #4f5c7c;
+  @include generate-opacity-color-var(#fff, 'theme-link-active-bg-color') 
 }
