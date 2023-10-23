@@ -26,6 +26,7 @@
   "devDependencies": {
     "@types/node": "^18.17.11",
     "esbuild": "^0.19.2",
+    "gradient-string": "^2.0.2",
     "markdown-it": "^13.0.1",
     "prisma": "^5.2.0",
     "typescript": "^5.2.2",
