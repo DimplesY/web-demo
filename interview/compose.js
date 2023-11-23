@@ -3,3 +3,4 @@ function compose(...args){
     return args.reduceRight((acc, fn) => fn(acc), x)
   }
 }
+
