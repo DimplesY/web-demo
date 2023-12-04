@@ -9,4 +9,3 @@ const result = gradient([
 
 
 console.log(result)
-

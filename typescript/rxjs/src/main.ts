@@ -17,4 +17,3 @@ fromEvent(document.querySelector('#btn')!, 'click')
 testBus.on('test', (data) => {
   console.log(data)
 })
-1
