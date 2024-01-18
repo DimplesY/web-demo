@@ -1,11 +1,18 @@
-const yargs = require('yargs')
+#!/usr/bin/env node
+const yargs = require('yargs/yargs')
 const { hideBin } = require('yargs/helpers')
-yargs(hideBin(process.argv))
-  .command('server [port]', 'start the server', (yargs) => {
-    return yargs.positional('port', {
-      describe: 'port to bind on',
-      default: 5000,
-    })
-  })
-  .parse()
 
+yargs(hideBin(process.argv))
+.scriptName("pirate-parser")
+.usage('$0 <cmd> [args]')
+.command('hello [name]', 'welcome ter yargs!', (yargs) => {
+  yargs.positional('name', {
+    type: 'string',
+    default: 'Cambi',
+    describe: 'the name to say hello to'
+  })
+}, function (argv) {
+  console.log('hello', argv.name, 'welcome to yargs!')
+})
+.help()
+.argv

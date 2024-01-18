@@ -1,23 +1,27 @@
-@use './mixins/mixins.scss' as *;
+// @use './mixins/mixins.scss' as *;
 
 
-@include b(name) {
-  color: red;
-}
+// @include b(name) {
+//   color: red;
+// }
 
-@include e(element) {
-  color: blue;
+// @include e(element) {
+//   color: blue;
 
-  @include m(modifier) {
-    color: green;
-  }
-}
-
-
+//   @include m(modifier) {
+//     color: green;
+//   }
+// }
 
 
-:root.dark {
-  --theme-background: #3c4463;
-  --theme-link-active-bg-color: #4f5c7c;
-  @include generate-opacity-color-var(#fff, 'theme-link-active-bg-color') 
-}
+
+
+// :root.dark {
+//   --theme-background: #3c4463;
+//   --theme-link-active-bg-color: #4f5c7c;
+//   @include generate-opacity-color-var(#fff, 'theme-link-active-bg-color') 
+// }
+
+@use "sass:color";
+
+@debug color.red(#f00);

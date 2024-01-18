@@ -1,0 +1,16 @@
+{
+  "name": "prisma",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.ts",
+  "scripts": {},
+  "devDependencies": {
+    "@types/lodash-es": "^4.17.12",
+    "prisma": "^5.7.1",
+    "typescript": "^5.3.3"
+  },
+  "dependencies": {
+    "@prisma/client": "5.7.1",
+    "lodash-es": "^4.17.21"
+  }
+}
