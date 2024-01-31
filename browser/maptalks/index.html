@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>瓦片图层与地理投影 - ArcGIS瓦片图层</title>
+  <style type="text/css">
+    html,
+    body {
+      margin: 0px;
+      height: 100%;
+      width: 100%;
+    }
+
+    .container {
+      width: 100%;
+      height: 100%;
+    }
+  </style>
+  <link rel="stylesheet" href="./maptalks.css" />
+  <script type="text/javascript" src="./maptalks.min.js"></script>
+  <script type="text/javascript" src="./maptalks-gl-layers.js"></script>
+
+  <body>
+    <div id="map" class="container"></div>
+
+    <script>
+      const arcUrl =
+        'http://10.39.69.38:6080/arcgis/rest/services/GPS_Tile_ZBAA_Normal_Label/MapServer'
+
+      maptalks.SpatialReference.loadArcgis(arcUrl + '?f=pjson&tokenParam=null&sourcename=GPS_Tile_ZBAA_Normal_Label', function (err, conf) {
+        if (err) {
+          throw new Error(err)
+        }
+        const ref = conf.spatialReference
+        ref.projection = 'EPSG:3857'
+        ref.fullExtent = null
+        const map = new maptalks.Map('map', {
+          center: [121, 0],
+          zoom: 1,
+          minZoom: 1,
+          maxZoom: 16,
+          spatialReference: ref,
+          baseLayer: new maptalks.TileLayer('base', {
+            tileSystem: conf.tileSystem,
+            tileSize: conf.tileSize,
+            urlTemplate: arcUrl + '/tile/{z}/{y}/{x}',
+          }),
+        })
+      })
+    </script>
+  </body>
+</html>

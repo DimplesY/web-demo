@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      #map {
+        width: 100%;
+        height: 100vh;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="map"></div>
+
+    <script
+      type="text/javascript"
+      charset="UTF-8"
+      src="http://10.9.48.92:8088/api/init.js?v=1.0&appSecret=8cd23dce73f7c6b541862a72b541bfb2&appKey=173463d52736d96bf7acc17c1cb626ea"
+    ></script>
+    <script>
+      var BNMap = null
+      var bnSymbol = null
+      var windows = null
+      var BNmapUtil = null
+      var BNHeatMap
+
+      require(['js/BNSymbol', 'js/BNUtil', 'js/BNFactory', 'js/BNDirectorys', 'js/jquery-3.2.1.min'], function (
+        BNSymbol,
+        util,
+        BNFactory,
+        BNDirectorys
+      ) {
+        // 创建符号
+        bnSymbol = new BNSymbol()
+        // 创建Geometry
+        var BNGeometry = new BNFactory('BNGeometry', BNMap)
+        // 初始化地图 2621 3238是申请资源时的资源id
+        BNMap = new BNFactory('2621', {
+          id: 'map',
+          options: {
+            logo: false,
+            slider: false,
+            minZoom: 1,
+            maxZoom: 10,
+            isDoubleClickZoom: false,
+          },
+        })
+
+        windows = new BNFactory('BNWindow')
+
+        //声明和定义临时图层，用于后面添加设备到地图
+        var graphicsLayer = BNMap.creatGraphicsLayer({
+          id: 'demo',
+        })
+        //添加到地图
+        BNMap.addGraphicsLayer(graphicsLayer)
+      })
+    </script>
+  </body>
+</html>

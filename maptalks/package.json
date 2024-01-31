@@ -19,6 +19,7 @@
     "maptalks": "1.0.0-rc.28",
     "maptalks.heatmap": "^0.6.2",
     "maptalks.three": "^0.38.1",
-    "three": "^0.160.0"
+    "three": "^0.160.0",
+    "weixin-js-sdk": "^1.6.5"
   }
 }
