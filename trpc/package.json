@@ -1,0 +1,22 @@
+{
+  "name": "trpc",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vite --port 3001"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@trpc/client": "11.0.0-next-beta.251",
+    "@trpc/server": "11.0.0-next-beta.251",
+    "cors": "^2.8.5",
+    "zod": "^3.22.4"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.17",
+    "vite": "^5.0.12"
+  }
+}

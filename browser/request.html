@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function internalRequest(params) {
+        const { url, ...restParams } = params
+        return fetch(url, restParams).then((response) => response.json())
+      }
+
+      class Interceptor {
+        handlers = []
+
+        use(onfulfilled = null, onrejected = null) {
+          this.handlers.push([onfulfilled, onrejected])
+        }
+
+        static pipeline(interceptor, task, context) {
+          const { handlers } = interceptor
+          let t = task
+          for (let i = handlers.length - 1; i >= 0; i--) {
+            const [sHandler, fHander] = handlers[i]
+            t = t.then(({ ...args }) => {
+              if (!sHandler) return args
+
+              const mArgs = { ...args, ...Object(context) }
+              return Promise.resolve(mArgs)
+                .then(sHandler)
+                .then((updates) => {
+                  const result = { ...mArgs, ...updates }
+                  if (context) {
+                    const keys = Object.keys(context)
+                    keys.forEach((key) => delete result[key])
+                  }
+                  return result
+                })
+            }, fHander)
+          }
+          return t
+        }
+      }
+
+      const requestInterceptor = new Interceptor()
+      const responseInterceptor = new Interceptor()
+
+      function request(params) {
+        const task = Interceptor.pipeline(requestInterceptor, Promise.resolve(params)).then((params) => {
+          return internalRequest(params)
+        })
+        return Interceptor.pipeline(responseInterceptor, task)
+      }
+
+      requestInterceptor.use((config) => {
+        return config
+      })
+
+      responseInterceptor.use((response) => {
+        return response['0']
+      })
+
+      request({
+        url: 'https://jsonplaceholder.typicode.com/posts',
+        method: 'GET',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+      }).then((res) => {
+        console.log(res)
+      })
+    </script>
+  </body>
+</html>

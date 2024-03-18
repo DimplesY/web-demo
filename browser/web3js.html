@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button id="connectButton">Connect to Metamask</button>
+    <h2 id='connectedAccount'>null</h2>
+    <script src="https://cdn.jsdelivr.net/npm/web3@latest/dist/web3.min.js"></script>
+    <script>
+      const connectButton = document.querySelector('#connectButton')
+
+      connectButton.addEventListener('click', async () => {
+        if (window.ethereum) {
+          const web3 = new Web3(window.ethereum)
+          await window.ethereum.request({ method: 'eth_requestAccounts' })
+
+          const accounts = await web3.eth.getAccounts()
+
+          document.getElementById('connectedAccount').innerText = accounts[0]
+        } else {
+          alert('Please download Metamask')
+        }
+      })
+    </script>
+  </body>
+</html>

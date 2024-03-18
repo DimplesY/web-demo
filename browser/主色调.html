@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let imgElement = new Image()
+      imgElement.src = 'https://picx.zhimg.com/v2-1b55b7294f63a57f5bd190e0c57e0b1e_l.jpg?source=32738c0c'
+      imgElement.crossOrigin = 'anonymous'
+      imgElement.onload = function () {
+        let canvas = document.createElement('canvas')
+        canvas.width = imgElement.width
+        canvas.height = imgElement.height
+        let context = canvas.getContext('2d')
+        context.drawImage(imgElement, 0, 0, imgElement.width, imgElement.height)
+        let imageData = context.getImageData(0, 0, canvas.width, canvas.height).data
+        let colorCount = {}
+        for (let i = 0; i < imageData.length; i += 4) {
+          let rgb = `${imageData[i]},${imageData[i + 1]},${imageData[i + 2]}`
+          colorCount[rgb] = (colorCount[rgb] || 0) + 1
+        }
+        let dominantColor = Object.keys(colorCount).reduce((a, b) => (colorCount[a] > colorCount[b] ? a : b))
+        console.log('主色调是：', dominantColor)
+      }
+    </script>
+  </body>
+
+</html>

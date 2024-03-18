@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="name">
+      <div class="sub-tree">子树</div>
+    </div>
+
+    <button id="btn">点击</button>
+
+    <script>
+      const mutationObserver = new MutationObserver((mutations) => {
+        console.log(mutations)
+      })
+
+      const el = document.querySelector('.name')
+      const subEl = document.querySelector('.sub-tree')
+
+      mutationObserver.observe(el, {
+        subtree: true,
+        attributes: true,
+      })
+
+      let i = 0
+      document.querySelector('#btn').addEventListener('click', () => {
+        subEl.classList.add('active' + i++)
+      })
+    </script>
+  </body>
+</html>
