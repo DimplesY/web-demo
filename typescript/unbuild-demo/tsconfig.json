@@ -1,7 +1,6 @@
 {
   "compilerOptions": {
     "target": "esnext",
-    // "module": "NodeNext",
     "lib": ["esnext", "DOM"],
     "moduleResolution": "Node",
     "esModuleInterop": true,
@@ -10,5 +9,9 @@
     "resolveJsonModule": true,
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
-  }
+    "outDir": "dist",
+    "declaration": true
+  },
+
+  "include": ["./src/**.ts",  "./src/types/**.d.ts"]
 }
