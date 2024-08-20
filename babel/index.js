@@ -28,3 +28,4 @@ traverse(ast, {
 
 const result = generator(ast, {}, code)
 console.log(result.code)
+

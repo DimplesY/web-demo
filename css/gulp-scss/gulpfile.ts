@@ -3,6 +3,7 @@ import { src, dest, series } from 'gulp'
 import gulpSass from 'gulp-sass'
 import gulpClean from 'gulp-clean'
 import { resolve, join } from 'path'
+import cleanCSS from 'gulp-clean-css'
 
 const dist = resolve(__dirname, 'dist')
 const base = resolve(__dirname, 'src')
@@ -16,6 +17,7 @@ function buildSass() {
   return src(join(base, 'styles', '**', '*.scss'))
     .pipe(sass.sync())
     .on('error', sass.logError)
+    // .pipe(cleanCSS({compatibility: 'ie8'}))
     .pipe(dest(join(dist, 'css')))
 }
 

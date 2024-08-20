@@ -1,4 +1,4 @@
-import { curry, compose, upperCase, add } from 'lodash/fp'
+import { compose, curry, get, pick } from 'lodash/fp'
 
 const responseData = {
   name: 'John',
@@ -27,4 +27,7 @@ const log = (x) => {
 
 const name = compose(map(log), prop('habit'))
 
-name(responseData)
+
+const data = compose(pick(['name', 'age']))
+
+console.log(data(responseData))
