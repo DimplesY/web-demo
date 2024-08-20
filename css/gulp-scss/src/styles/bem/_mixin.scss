@@ -1,0 +1,69 @@
+@use 'config' as *;
+@use 'function' as fn;
+
+@mixin b($block) {
+  $B: $namespace + '-' + $block !global;
+
+  .#{$B} {
+    @content;
+  }
+}
+
+
+@mixin e($element...) {
+  $selector: &;
+  $selectors: "";
+
+  @if fn.containsPseudo($selector) {
+    @each $item in $element {
+      $selectors: #{$selectors + "." + $B + $elementSeparator + $item + ","};
+      @debug $selectors;
+    }
+
+    @at-root {
+      #{$selector} {
+        #{$selectors} {
+          @content;
+        }
+      }
+    }
+  }
+
+  @else {
+    @each $item in $element {
+      $selectors: #{$selectors + $selector + $elementSeparator + $item + ","};
+    }
+
+    @at-root {
+      #{$selectors} {
+        @content;
+      }
+    }
+  }
+}
+
+
+@mixin m($modifier...) {
+  $selectors: "";
+
+  @each $item in $modifier {
+    $selectors: #{$selectors + & + $modifierSeparator + $item + ","};
+  }
+
+  @at-root {
+    #{$selectors} {
+      @content;
+    }
+  }
+}
+
+
+@mixin when($states...) {
+  @at-root {
+    @each $state in $states {
+      &.#{$state-prefix + $state} {
+        @content;
+      }
+    }
+  }
+}
