@@ -1,16 +1,22 @@
-import winston from 'winston';
+import MagicString from 'magic-string';
+import fs from 'fs'
 
-const logger = winston.createLogger({
-    level: 'debug',
-    format: winston.format.simple(),
-    transports: [
-        new winston.transports.Console(),
-        new winston.transports.File({ 
-            dirname: 'log', filename: 'test.log' 
-        }),
-    ]
-});
+const s = new MagicString('problems = 99');
 
-logger.info('光光光光光光光光光');
-logger.error('东东东东东东东东');
-logger.debug(66666666);
+s.update(0, 8, 'answer');
+s.toString(); // 'answer = 99'
+
+s.update(11, 13, '42'); // character indices always refer to the original string
+s.toString(); // 'answer = 42'
+
+s.prepend('var ').append(';'); // most methods are chainable
+s.toString(); // 'var answer = 42;'
+
+const map = s.generateMap({
+  source: 'source.js',
+  file: 'converted.js.map',
+  includeContent: true
+}); // generates a v3 sourcemap
+
+fs.writeFileSync('converted.js', s.toString());
+fs.writeFileSync('converted.js.map', map.toString());

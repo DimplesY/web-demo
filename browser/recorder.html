@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <style>
+    *{
+      padding: 0;
+      margin: 0;
+    }
+
+    video {
+      margin: 0 auto;
+      display: block;
+      height: 500px;
+      background: #000;
+    }
+  </style>
+</head>
+<body>
+
+  <video id="video"></video>
+  <button id="start">开始录屏</button>
+  <button id="stop">停止录屏</button>
+  <script>
+
+    const video = document.getElementById('video')
+    const start = document.getElementById('start')
+    const stop = document.getElementById('stop')
+    const chunks = []
+    let mediaRecorder 
+
+    start.onclick = async () => {
+      const stream = await navigator.mediaDevices.getDisplayMedia({ audio: true })
+      mediaRecorder = new MediaRecorder(stream, {
+        mimeType: 'video/mp4; codecs=avc1.42E01E',
+        videoBitsPerSecond : 25000000,
+        mimeType : 'video/mp4'
+      })
+
+      mediaRecorder.addEventListener('dataavailable', function (e) {
+        chunks.push(e.data)
+      })
+
+      mediaRecorder.addEventListener('stop', () => {
+          const blob = new Blob(chunks, {
+            type: chunks[0].type
+          })
+          const url = URL.createObjectURL(blob)
+          const a = document.createElement('a')
+          a.href = url
+          a.download = 'test.mp4'
+          document.body.appendChild(a)
+          a.click()
+          document.body.removeChild(a)
+          URL.revokeObjectURL(url)
+          chunks.length = 0
+      })
+
+      video.srcObject = stream
+      video.play()
+      mediaRecorder.start()
+    }
+
+    stop.onclick = () => {
+      mediaRecorder.stop()
+      stream.getTracks().forEach(track => track.stop())
+      video.srcObject = null
+    }
+
+
+
+
+    
+  </script>
+</body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <style>
+    canvas {
+      border: 1px solid black;
+    }
+  </style>
+</head>
+<body>
+
+
+  
+  <script id="vertex-shader" type="x-shader/x-vertex">
+    attribute vec2 aPos;
+    
+    void main() {
+      gl_PointSize = 10.0;
+      gl_Position = vec4(aPos, 0.0, 1.0);
+    }
+  </script>
+
+  <script id="fragment-shader" type="x-shader/x-fragment">
+    void main() {
+      gl_FragColor = vec4(1.0, 0.0, 0.0, 1.0);
+    }
+  </script>
+
+  <script>
+
+    const canvas = document.createElement('canvas')
+    const gl = canvas.getContext('webgl')
+
+    // 创建着色器
+    const vertexShader = gl.createShader(gl.VERTEX_SHADER)
+    const fragmentShader = gl.createShader(gl.FRAGMENT_SHADER)
+
+    // 获取着色器源代码
+    const vertextSource = document.querySelector('#vertex-shader').innerText
+    const fragmentSource = document.querySelector('#fragment-shader').innerText
+
+    // 设置着色器源代码
+    gl.shaderSource(vertexShader, vertextSource)
+    gl.shaderSource(fragmentShader, fragmentSource)
+
+    // 编译着色器源代码
+    gl.compileShader(vertexShader)
+    gl.compileShader(fragmentShader)
+
+    // 创建程序
+    const program = gl.createProgram()
+
+    // 将着色器附加到程序上
+    gl.attachShader(program, vertexShader)
+    gl.attachShader(program, fragmentShader)
+
+    // 链接程序
+    gl.linkProgram(program)
+    
+    // 使用程序
+    gl.useProgram(program)
+
+    // 获取属性变量
+    const aPos = gl.getAttribLocation(program, 'aPos')
+    // 启用属性变量
+    gl.vertexAttrib2f(aPos, 0.5, 0.5)
+
+    gl.drawArrays(gl.POINTS, 0, 1)
+    
+    document.body.appendChild(canvas)
+
+
+  </script>
+
+</body>
+</html>
