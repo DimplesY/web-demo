@@ -1,0 +1,11 @@
+{
+  "name": "js-example",
+  "version": "1.0.0",
+  "description": "学习前端的代码例子",
+  "main": "index.js",
+  "scripts": {
+  },
+  "keywords": [],
+  "author": "DimplesY",
+  "license": "MIT"
+}
