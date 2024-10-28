@@ -37,33 +37,48 @@
       const box = document.querySelector('#box')
       const indicator = document.querySelector('#indicator')
       let isMove = false
+      let startPoint = {
+        x: 0,
+        y: 0,
+      }
 
-      box.addEventListener('click', (e) => {
-        const x = e.clientX
-        const y = e.clientY
-        const left = x - indicator.offsetWidth / 2
-        indicator.style.left = (left < 0 ? 0 : left) + 'px'
-      })
+      // function handleClick(e) {
+      //   const x = e.clientX
+      //   const y = e.clientY
+      //   const left = x - indicator.offsetWidth / 2
+      //   indicator.style.left = (left < 0 ? 0 : left) + 'px'
+      // }
 
-      box.addEventListener('mousedown', (e) => {
+      function handleMouseDown(e) {
+        startPoint.x = e.clientX
+        startPoint.y = e.clientY
         isMove = true
-      })
+        document.body.addEventListener('mousemove', handleMouseMove)
+        document.body.addEventListener('mouseup', handleMouseUp)
+      }
 
-      box.addEventListener('mousemove', (e) => {
+      function handleMouseMove(e) {
         if (isMove) {
           const x = e.clientX
-          const left = x - indicator.offsetWidth / 2
-          indicator.style.left = (left < 0 ? 0 : left) + 'px'
+          const y = e.clientY
+          const left = indicator.offsetLeft + x - startPoint.x
+          indicator.style.left = (left < 0? 0 : left) + 'px'
+          startPoint.x = x
+          startPoint.y = y
         }
-      })
+      }
 
-      box.addEventListener('mouseup', (e) => {
+      function handleMouseUp() {
         isMove = false
-      })
+        document.body.removeEventListener('mousemove', handleMouseMove)
+        document.body.removeEventListener('mouseup', handleMouseUp)
+      }
 
-      box.addEventListener('mouseleave', (e) => {
-        isMove = false
-      })
+
+      // box.addEventListener('click', handleClick)
+
+      box.addEventListener('mousedown', handleMouseDown)
+
 
     </script>
   </body>
