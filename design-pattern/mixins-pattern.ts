@@ -1,7 +1,8 @@
-const CalcMixin = (Base) =>
+const CalcMixin = (Base: any) =>
   class extends Base {
+
     calc() {
-      console.log("混入 clac");
+      console.log("混入 calc");
     }
   };
 

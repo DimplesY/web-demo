@@ -1,19 +1,19 @@
-function createEventHook() {
+function createEventHook<T = any>() {
 
-  const fns = new Set()
+  const fns = new Set<Function>()
 
 
-  function off(fn) {
+  function off(fn: Function) {
     fns.delete(fn)
   }
 
-  function trigger(...args) {
+  function trigger(...args: T[]) {
     for (const fn of fns) {
       fn(...args)
     }
   }
 
-  function on(fn) {
+  function on(fn: Function) {
     fns.add(fn)
     return () => off(fn)
   }
@@ -27,10 +27,7 @@ function createEventHook() {
 
 }
 
-
-
-const hooks = createEventHook()
-
+const hooks = createEventHook<string>()
 
 hooks.on(res => {
   console.log(res)

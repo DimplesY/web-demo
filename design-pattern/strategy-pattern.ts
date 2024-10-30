@@ -1,4 +1,6 @@
+
 type Strategy = [boolean, () => void]
+
 
 const strategy: Strategy[] = [
   [
@@ -15,7 +17,8 @@ const strategy: Strategy[] = [
   ]
 ]
 
-function exeStrategyActions(actions: Strategy[]) {
+
+function executeStrategyActions(actions: Strategy[]) {
   actions.some((item) => {
     const [flag, action] = item
     if (flag) {
@@ -25,4 +28,5 @@ function exeStrategyActions(actions: Strategy[]) {
   })
 }
 
-exeStrategyActions(strategy)
+
+executeStrategyActions(strategy)

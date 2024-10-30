@@ -21,6 +21,3 @@ const mixin2 = (Base) => class extends Base {
 
 class Test extends mixin2(mixin1(Class)) {
 }
-
-
-console.log(new Test())
