@@ -3,10 +3,9 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {},
-  "dependencies": {
-  },
+  "dependencies": {},
   "devDependencies": {
-    "eslint": "^8.57.0",
+    "eslint": "^9.13.0",
     "eslint-config-custom": "workspace:^"
   }
 }
