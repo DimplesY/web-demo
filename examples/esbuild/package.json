@@ -1,0 +1,16 @@
+{
+  "name": "esbuild-demo",
+  "version": "1.0.0",
+  "description": "",
+  "type": "module",
+  "scripts": {
+    "build": "node ./scripts/build.js"
+  },
+  "devDependencies": {
+    "esbuild": "^0.24.0",
+    "unplugin-vue": "^5.1.5"
+  },
+  "peerDependencies": {
+    "vue": "^3.5.12"
+  }
+}
