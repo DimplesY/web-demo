@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+  <meta charset='UTF-8' />
+  <meta name='viewport' content='width=device-width, initial-scale=1' />
+  <title>地图 - 监听地图事件</title>
+  <style type='text/css'>
+    html,
+    body {
+      margin: 0px;
+      height: 100%;
+      width: 100%;
+    }
+
+    .container {
+      width: 100%;
+      height: 100%;
+    }
+  </style>
+  <link rel='stylesheet' href='https://maptalks.com/api/maptalks.css' />
+  <script type='text/javascript' src='https://maptalks.com/api/maptalks.min.js'></script>
+  <script type='text/javascript' src='https://maptalks.com/api/maptalks-gl-layers.js'></script>
+
+  <body>
+    <div id="map" class="container"></div>
+    <script>
+// 创建地图实例
+const map = new maptalks.Map('map', {
+    center: [112.92842231863501,28.20947727067384],
+    zoom: 17,
+    bearing: 0,
+    pitch: 0,
+    layers: [
+        new maptalks.TileLayer('base', {
+            urlTemplate: 'http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
+            subdomains: ['a', 'b', 'c']
+        }),
+    ]
+});
+
+const radarLayer = new maptalks.VectorLayer('radar', {
+  enableAltitude: true,
+  altitudeProperty: 'altitude',
+}).addTo(map);
+
+    // 设置扇形的初始参数
+    const center = [112.92842231863501,28.20947727067384];  // 中心点
+    const baseRadius = 0; // 初始半径
+    const maxRadius = 8000; // 最大半径（扩散的最大范围）
+    const duration = 3000;   // 动画持续时间，单位为毫秒
+    const animationSpeed = 16;  // 动画更新频率（大约60fps）
+
+    // 存储多个波纹
+const sectors = [];
+const numOfRipples = 3;  // 波纹的数量
+
+// 创建多个 Sector 扇形来模拟声波
+for (let i = 0; i < numOfRipples; i++) {
+    const sector = new maptalks.Sector(center, baseRadius, -30 + 90, 30 + 90, {
+        symbol: {
+            lineWidth: 0,
+            polygonFill: `rgba(71, 179, 243, 0.1)`, // 初始颜色
+        },
+        properties: {
+            name: `sector-${i}`,
+            altitude: 10,
+        },
+    }).addTo(radarLayer).setZIndex(3);
+
+    // 保存 sector 用于动画更新
+    sectors.push({
+        sector,                   // 扇形对象
+        startTime: Date.now() + (i * duration / numOfRipples),  // 每个波纹的开始时间有延迟
+    });
+}
+
+
+// 动画控制参数
+function animateRipples() {
+    const currentTime = Date.now();
+
+    // 遍历每个波纹，模拟不同的扩散效果
+    sectors.forEach((item) => {
+        const { sector, startTime } = item;
+        const elapsedTime = currentTime - startTime;
+        const rippleProgress = Math.min(elapsedTime / duration, 1); // 计算每个波纹的动画进度（0到1）
+
+        // 计算当前波纹的半径
+        const radius = Math.max(baseRadius + (maxRadius - baseRadius) * rippleProgress, 0)
+        
+        const opacity = 0.7 * (1 - rippleProgress);
+        const r = 71;
+        const g = 179;
+        const b = 243;
+
+        // 创建渐变颜色
+        const gradientColor = `rgba(${r}, ${g}, ${b}, ${opacity})`;
+
+        // 更新每个波纹的半径和渐变颜色
+        sector.setRadius(radius);
+        sector.setSymbol({
+            'polygonFill': gradientColor, 
+            lineWidth: 0,
+        });
+
+        // 当波纹完成一次扩展后，重置并重新开始
+        if (rippleProgress >= 1) {
+            // 重置波纹的状态
+            item.startTime = Date.now(); // 重设开始时间
+        }
+    });
+
+    // 继续更新动画
+    requestAnimationFrame(animateRipples);
+}
+
+// 启动动画
+animateRipples();
+
+
+    </script>
+  </body>
+
+</html>

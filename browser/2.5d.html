@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+.textarea-container {
+  width: 300px;
+  height: 150px;
+  border: 1px solid #ccc;
+  padding: 10px;
+  position: relative;
+}
+
+.editable-div {
+  width: 100%;
+  height: 100%;
+  min-height: 100px;
+  outline: none;
+  overflow: auto;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  position: relative;
+  display: flex;
+  align-items: flex-start;  /* 确保文本从顶部开始 */
+}
+
+.placeholder {
+  color: #888;
+  pointer-events: none;  /* 防止点击 placeholder 干扰编辑 */
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  font-style: italic;
+  visibility: visible;
+}
+
+
+
+  </style>
+</head>
+<body>
+  <div class="textarea-container">
+    <div class="editable-div" contenteditable="true" id="editableDiv">
+      <span class="placeholder" id="placeholder">请输入文本...</span>
+    </div>
+  </div>
+  
+
+  <script>
+const editableDiv = document.getElementById('editableDiv');
+const placeholder = document.getElementById('placeholder');
+
+// 检查输入框是否为空，并显示/隐藏 placeholder
+function checkPlaceholder() {
+  if (editableDiv.textContent.trim() === "") {
+    placeholder.style.display = "block";  // 显示 placeholder
+  } else {
+    placeholder.style.display = "none";   // 隐藏 placeholder
+  }
+}
+
+// 初始化时检查
+checkPlaceholder();
+
+// 当内容变化时检查
+editableDiv.addEventListener('input', checkPlaceholder);
+
+
+  </script>
+  
+</body>
+</html>
