@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+    .box {
+      height: 100vh;
+      width: 100vw;
+      position: relative;
+    }
+
+    .img {
+      height: 100px;
+      position: absolute;
+    }
+  </style>
+</head>
+<body>
+  <div class="box" id="box">
+    <img class="img" draggable="false" id="img" src="https://images.pexels.com/photos/14747089/pexels-photo-14747089.jpeg"  />
+  </div>
+
+  <script>
+    const box = document.getElementById('box')
+    const img = document.getElementById('img')
+    let isMove = false
+    const start = {
+      x: 0,
+      y: 0
+    }
+
+    const startPosition = {
+      left: 0,
+      top: 0
+    }
+
+    img.addEventListener('mousedown', (e) => {
+      console.log(e)
+
+      start.x = e.clientX
+      start.y = e.clientY
+      startPosition.left = img.offsetLeft
+      startPosition.top = img.offsetTop
+      isMove = true
+      
+      document.body.addEventListener('mousemove', (e) => {
+        if (isMove) {
+          const moveX = e.clientX - start.x
+          const moveY = e.clientY - start.y
+          img.style.left = startPosition.left + moveX + 'px'
+          img.style.top = startPosition.top + moveY + 'px'
+        }
+      })
+
+      document.body.addEventListener('mouseup', (e) => {
+        isMove = false
+      })
+    
+    })
+
+
+
+  </script>
+</body>
+</html>
