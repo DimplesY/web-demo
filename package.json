@@ -2,19 +2,19 @@
   "name": "js-example",
   "version": "1.0.0",
   "description": "学习前端的代码例子",
-  "packageManager": "pnpm@9.12.3",
+  "packageManager": "pnpm@9.14.4",
   "scripts": {},
   "author": "DimplesY",
   "license": "MIT",
   "devDependencies": {
-    "@babel/generator": "^7.26.0",
-    "@babel/parser": "^7.26.1",
-    "@babel/traverse": "^7.25.9",
-    "@types/node": "^22.8.4",
-    "typescript": "^5.6.3",
+    "@babel/generator": "^7.26.3",
+    "@babel/parser": "^7.26.3",
+    "@babel/traverse": "^7.26.4",
     "@prisma/client": "5.7.1",
-    "lodash-es": "^4.17.21",
     "@types/lodash-es": "^4.17.12",
-    "prisma": "^5.21.1"
+    "@types/node": "^22.10.1",
+    "lodash-es": "^4.17.21",
+    "prisma": "^6.0.1",
+    "typescript": "^5.7.2"
   }
 }

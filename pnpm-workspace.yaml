@@ -1,3 +1,6 @@
 packages:
   - 'examples/**'
-  - 'prisma/**'
+  - 'prisma-demo/**'
+  - 'drizzle-demo/**'
+  - 'plugin-test/**'
+  - 'trpc/**'

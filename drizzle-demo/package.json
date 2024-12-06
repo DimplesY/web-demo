@@ -1,9 +1,8 @@
 {
-  "name": "web3",
+  "name": "drizzle-demo",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "type": "commonjs",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -11,6 +10,13 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@solana/web3.js": "^1.95.8"
+    "dotenv": "^16.4.7",
+    "drizzle-orm": "^0.37.0",
+    "pg": "^8.13.1"
+  },
+  "devDependencies": {
+    "@types/pg": "^8.11.10",
+    "drizzle-kit": "^0.29.1",
+    "tsx": "^4.19.2"
   }
 }

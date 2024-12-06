@@ -10,20 +10,20 @@
     "dev": "unbuild --stub"
   },
   "dependencies": {
-    "@vueuse/core": "^11.1.0",
+    "@vueuse/core": "^12.0.0",
     "date-fns": "^4.1.0",
-    "magic-string": "^0.30.12",
+    "magic-string": "^0.30.14",
     "mri": "^1.2.0",
     "reflect-metadata": "^0.2.2",
-    "vue": "^3.5.12",
-    "winston": "^3.15.0"
+    "vue": "^3.5.13",
+    "winston": "^3.17.0"
   },
   "devDependencies": {
-    "@antfu/eslint-config": "^3.8.0",
-    "@types/node": "^22.8.4",
+    "@antfu/eslint-config": "^3.11.2",
+    "@types/node": "^22.10.1",
     "esbuild": "^0.24.0",
-    "eslint": "^9.13.0",
-    "typescript": "^5.6.3",
+    "eslint": "^9.16.0",
+    "typescript": "^5.7.2",
     "unbuild": "^2.0.0"
   }
 }
