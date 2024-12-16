@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    canvas {
+      border: 1px solid black;
+    }
+  </style>
+</head>
+<body>
+  <canvas id="canvas"></canvas>
+  <script>
+
+    const canvas = document.querySelector('#canvas')
+    
+    const image = new Image()
+    image.onload = () => {
+      const ctx = canvas.getContext('2d')
+      canvas.width = 200
+      canvas.height = 200
+      ctx.drawImage(image, 0, 0, 100, 100, 0, 0, 100, 100)
+    }
+
+    image.src = 'https://images.pexels.com/photos/18893258/pexels-photo-18893258.jpeg'
+
+
+
+
+  </script>
+</body>
+</html>

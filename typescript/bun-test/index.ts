@@ -1,8 +1,9 @@
+import figlet from "figlet"
 
 Bun.serve({
   port: 3000,
   fetch(request, server) {
-    const ip = server.requestIP(request)
-    return new Response(ip?.address)
+    const body = figlet.textSync("Hello World")
+    return new Response(body)
   },
 })
