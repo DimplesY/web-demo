@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GSAP ScrollTrigger Demo</title>
+    <style>
+      body {
+          margin: 0;
+          font-family: Arial, sans-serif;
+      }
+
+      .container {
+          height: 300vh; /* 设置容器高度以便滚动 */
+      }
+
+      .box {
+          height: 100vh;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          font-size: 2em;
+          background-color: #3498db;
+      }
+
+      .sticky {
+          height: 100vh;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          font-size: 2em;
+          background-color: #e74c3c;
+      }
+
+          </style>
+      </head>
+<body>
+    <div class="container">
+        <section id="section1" class="box">Section 1</section>
+        <section id="section2" class="sticky">Section 2 (Sticky)</section>
+        <section id="section3" class="box">Section 3</section>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/ScrollTrigger.min.js"></script>
+    <script>
+gsap.registerPlugin(ScrollTrigger);
+
+// 第一部分动画
+gsap.from("#section1", {
+    scrollTrigger: {
+        trigger: "#section1",
+        start: "top center",
+        end: "bottom 20%",
+        scrub: true,
+        // markers: true
+    },
+    scale: 0.5,
+    rotation: 90,
+});
+
+// // 第二部分固定效果
+// gsap.to(".sticky", {
+//     scrollTrigger: {
+//         trigger: "#section2",
+//         start: "top top",
+//         end: "+=300",
+//         pin: true,
+//         markers: true
+//     },
+// });
+
+// // 第三部分动画
+// gsap.fromTo("#section3", 
+//   { backgroundColor: "#2ecc71", scale: 0.5 }, 
+//   { 
+//       backgroundColor: "#9b59b6", 
+//       scale: 1.2, 
+//       scrollTrigger: {
+//           trigger: "#section3",
+//           start: "top center",
+//           end: "bottom 80%",
+//           scrub: true,
+//           markers: true
+//       }
+//   });
+
+
+    </script>
+</body>
+</html>

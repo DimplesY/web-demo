@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+    #map {
+      width: 100vw;
+      height: 100vh;
+    }
+</style>
+
+</head>
+<body>
+  <div id="map"></div>
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/maptalks/dist/maptalks.css"
+/>
+<!-- 引入完成的功能包括webgl -->
+<script
+    type="text/javascript"
+    src="https://cdn.jsdelivr.net/npm/maptalks-gl/dist/maptalks-gl.min.js"
+></script>
+<!-- 其他插件脚本 -->
+
+<script>
+var map = new maptalks.Map("map", {
+    center: [112.92866518768886, 28.20921960808467],
+    zoom: 18,
+    zoomControl: true,
+    baseLayer: new maptalks.TileLayer("base", {
+        urlTemplate:
+            "https://webrd01.is.autonavi.com/appmaptile?lang=zh_cn&size=1&scale=1&style=8&x={x}&y={y}&z={z}",
+        subdomains: ["a", "b", "c", "d"],
+        maxAvailableZoom: 18,
+    }),
+});
+
+var gridLayer = new maptalks.VectorLayer('grid', {
+  enableAltitude: true,
+}).addTo(map)
+
+const startPoint = [112.93287679708551, 28.206413885533916]
+const endPoint = [112.95208875562605, 28.20153904807857]
+const distance = 100
+
+map.on('click', (e) => {
+  console.log(e.coordinate.x, e.coordinate.y)
+})
+
+
+function createRectangle(center, length) {
+  return new maptalks.Rectangle(center, length, length, {
+    symbol: [
+      {
+        lineColor: `rgba(0, 0, 0, 0.1)`,
+        lineWidth: 1,
+      },
+    ],
+  })
+}
+
+function renderGrid(point) {
+  if(point[0] > endPoint[0] || point[1] < endPoint[1]) {
+    return
+  }
+  const rootGrid = createRectangle(point, distance)
+  rootGrid.addTo(gridLayer)
+  const info = rootGrid.getExtent()
+  const leftTop = [info.xmin, info.ymax]
+  const leftBottom = [info.xmin, info.ymin]
+  const rightTop = [info.xmax, info.ymax]
+  const rightBottom = [info.xmax, info.ymin]
+  renderGrid(rightBottom)
+  renderColGrid(rightTop)
+  renderRowGird(leftBottom)
+}
+
+function renderColGrid(point) {
+  if(point[0] > endPoint[0]) {
+    return
+  }
+  // 横向绘制网格
+  const rootGrid = createRectangle(point, distance)
+  rootGrid.addTo(gridLayer)
+  const info = rootGrid.getExtent()
+  const rightTop = [info.xmax, info.ymax]
+  renderColGrid(rightTop)
+}
+
+function renderRowGird(point) {
+  if(point[1] < endPoint[1]) {
+    return
+  }
+
+  // 纵向绘制网格
+  const rootGrid = createRectangle(point, distance)
+  rootGrid.addTo(gridLayer)
+  const info = rootGrid.getExtent()
+  const leftBottom = [info.xmin, info.ymin]
+  renderRowGird(leftBottom)
+}
+
+
+renderGrid(startPoint)
+
+</script>
+</body>
+</html>
