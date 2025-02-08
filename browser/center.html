@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+    .app {
+      height: 100vh;
+      width: 100vw;
+      position: relative;
+      box-sizing: border-box;
+      overflow: hidden;
+    }
+
+    .x {
+      position: absolute;
+      height: 1px; 
+      width: 100vw;
+      background: #ccc;
+    }
+
+    .y {
+      position: absolute;
+      height: 100vh;
+      width: 1px;
+      background: #ccc;
+    }
+
+    .text {
+      position: absolute;
+      color: #ccc;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="app">
+    <div class="x"></div>
+    <div class="y"></div>
+    <div class="text">(0,0)</div>
+  </div>
+
+  <script>
+    const x = document.querySelector('.x')
+    const y = document.querySelector('.y')
+    const app = document.querySelector('.app')
+    const text = document.querySelector('.text')
+
+    app.addEventListener('mousemove', (e) => {
+      x.style.top = e.clientY + 'px'
+      y.style.left = e.clientX + 'px'
+      text.style.left = e.clientX + 10 + 'px'
+      text.style.top = e.clientY + 10 + 'px'
+      text.textContent = `(${e.clientX}, ${e.clientY})`
+    })
+
+  </script>
+</body>
+</html>
