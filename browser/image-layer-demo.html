@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Maptalks 加载图片地图</title>
+  <link rel="stylesheet" href="https://unpkg.com/maptalks-gl/dist/maptalks-gl.css">
+  <script type="text/javascript" src="https://unpkg.com/maptalks-gl/dist/maptalks-gl.js"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/maptalks.heatlayer/dist/maptalks.heatlayer.js"></script>
+  <script type="text/javascript" src="https://unpkg.com/@maptalks/transcoders.draco/dist/transcoders.draco.js"></script>
+  <script type="text/javascript" src="https://unpkg.com/@maptalks/transcoders.crn/dist/transcoders.crn.js"></script>
+  <script type="text/javascript" src="https://unpkg.com/@maptalks/transcoders.ktx2/dist/transcoders.ktx2.js"></script>
+  <style>
+
+    * {
+      padding: 0;
+      margin: 0;
+    }
+    #map {
+      width: 100vw;
+      height: 100vh;
+    }
+  </style>
+</head>
+<body>
+  <div id="map"></div>
+
+  <script>
+    const map = new maptalks.Map('map', {
+      center: [0, 0],
+      zoom: 1,
+      baseLayer: false
+    });
+
+    let distancePerPixel = map.pixelToDistance(1, 1);
+    let zoom = map.getZoom();
+    let center = map.getCenter();
+    let latitude = center.y;
+
+    map.on('zooming', function (e) {
+      distancePerPixel = map.pixelToDistance(1, 1);
+      zoom = map.getZoom();
+      center = map.getCenter();
+      latitude = center.y;
+    });
+
+    const image = new Image();
+    image.onload = () => {
+      const imageWidth = image.width;
+      const imageHeight = image.height;
+
+      // 计算图片的地理范围
+      const lngResolution = 360 / (256 * Math.pow(2, zoom)); // 经度分辨率
+      const latResolution = lngResolution / Math.cos((latitude * Math.PI) / 180); // 纬度分辨率
+
+      // 计算图片的地理范围
+      const minLng = center.x - (imageWidth / 2) * lngResolution;
+      const maxLng = center.x + (imageWidth / 2) * lngResolution;
+      const minLat = center.y - (imageHeight / 2) * latResolution;
+      const maxLat = center.y + (imageHeight / 2) * latResolution;
+
+      const extent = [minLng, minLat, maxLng, maxLat];
+
+      const imageLayer = new maptalks.ImageLayer('image-layer', {
+        url: './map.jpg',
+        opacity: 1,
+        extent
+      });
+
+      imageLayer.addTo(map);
+
+      // 调整地图范围以适应图片
+      map.fitExtent(extent);
+
+      console.log('图片的地理范围:', extent);
+    };
+
+    image.src = './map.jpg';
+
+
+    
+  </script>
+</body>
+</html>

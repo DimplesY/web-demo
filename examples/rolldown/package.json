@@ -1,0 +1,13 @@
+{
+  "name": "rolldown",
+  "version": "1.0.0",
+  "scripts": {
+    "build": "rolldown src/main.js --file bundle.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "rolldown": "1.0.0-beta.7"
+  }
+}
