@@ -1,0 +1,14 @@
+{
+  "name": "@js-example/tooling",
+  "version": "1.0.0",
+  "description": "Build tools and development utilities",
+  "private": true,
+  "scripts": {
+    "dev": "echo 'Tooling dev command'",
+    "build": "echo 'Tooling build command'",
+    "test": "echo 'Tooling test command'"
+  },
+  "keywords": ["webpack", "esbuild", "turbo"],
+  "author": "DimplesY",
+  "license": "MIT"
+}

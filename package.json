@@ -1,9 +1,15 @@
 {
-  "name": "js-example",
+  "name": "@js-example/monorepo",
   "version": "1.0.0",
-  "description": "学习前端的代码例子",
+  "description": "A monorepo of JavaScript learning examples organized by functionality",
   "packageManager": "pnpm@10.9.0",
-  "scripts": {},
+  "scripts": {
+    "build": "pnpm --recursive build",
+    "dev": "pnpm --recursive dev",
+    "test": "pnpm --recursive test",
+    "lint": "pnpm --recursive lint"
+  },
+  "keywords": ["javascript", "learning", "examples", "monorepo"],
   "author": "DimplesY",
   "license": "MIT",
   "devDependencies": {

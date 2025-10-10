@@ -1,0 +1,14 @@
+{
+  "name": "@js-example/utilities",
+  "version": "1.0.0",
+  "description": "Utility libraries and patterns",
+  "private": true,
+  "scripts": {
+    "dev": "echo 'Utilities dev command'",
+    "build": "echo 'Utilities build command'",
+    "test": "echo 'Utilities test command'"
+  },
+  "keywords": ["design-patterns", "functional-programming"],
+  "author": "DimplesY",
+  "license": "MIT"
+}

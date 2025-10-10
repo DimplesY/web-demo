@@ -1,0 +1,14 @@
+{
+  "name": "@js-example/frontend",
+  "version": "1.0.0",
+  "description": "Frontend related code examples",
+  "private": true,
+  "scripts": {
+    "dev": "echo 'Frontend dev command'",
+    "build": "echo 'Frontend build command'",
+    "test": "echo 'Frontend test command'"
+  },
+  "keywords": ["frontend", "browser", "css", "webgl"],
+  "author": "DimplesY",
+  "license": "MIT"
+}

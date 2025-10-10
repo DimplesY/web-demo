@@ -1,0 +1,14 @@
+{
+  "name": "@js-example/lang-features",
+  "version": "1.0.0",
+  "description": "Language features and syntax examples",
+  "private": true,
+  "scripts": {
+    "dev": "echo 'Lang-features dev command'",
+    "build": "echo 'Lang-features build command'",
+    "test": "echo 'Lang-features test command'"
+  },
+  "keywords": ["es6", "typescript", "babel"],
+  "author": "DimplesY",
+  "license": "MIT"
+}

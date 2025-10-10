@@ -1,0 +1,14 @@
+{
+  "name": "@js-example/examples",
+  "version": "1.0.0",
+  "description": "Example code and practice problems",
+  "private": true,
+  "scripts": {
+    "dev": "echo 'Examples dev command'",
+    "build": "echo 'Examples build command'",
+    "test": "echo 'Examples test command'"
+  },
+  "keywords": ["examples", "interview", "practice"],
+  "author": "DimplesY",
+  "license": "MIT"
+}

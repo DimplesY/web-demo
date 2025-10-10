@@ -1,0 +1,14 @@
+{
+  "name": "@js-example/backend",
+  "version": "1.0.0",
+  "description": "Backend related code examples",
+  "private": true,
+  "scripts": {
+    "dev": "echo 'Backend dev command'",
+    "build": "echo 'Backend build command'",
+    "test": "echo 'Backend test command'"
+  },
+  "keywords": ["node", "database", "cache", "api"],
+  "author": "DimplesY",
+  "license": "MIT"
+}
