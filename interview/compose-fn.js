@@ -1,5 +1,5 @@
 function compose(...funcs) {
-  return () => funcs.reduceRight((next, fn) => fn(next), () => {})()
+  return funcs.reduceRight((next, fn) => () =>  fn(next), () => {})
 }
 
 
@@ -20,5 +20,7 @@ function d(next) {
   next()
   console.log(6)
 }
+
+f(() => g(() => d(() => {})))
 
 compose(f, g, d)()

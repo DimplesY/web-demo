@@ -7,6 +7,10 @@ settings:
 importers:
 
   .:
+    dependencies:
+      eventemitter3:
+        specifier: ^5.0.1
+        version: 5.0.1
     devDependencies:
       '@babel/generator':
         specifier: ^7.26.3
@@ -72,7 +76,7 @@ importers:
         version: 0.24.0
       unplugin-vue:
         specifier: ^5.2.1
-        version: 5.2.1(@types/node@22.10.1)(terser@5.36.0)(tsx@4.19.2)(vue@3.5.12(typescript@5.7.2))
+        version: 5.2.1(@types/node@22.10.1)(terser@5.36.0)(tsx@4.19.2)(vue@3.5.12(typescript@5.7.2))(yaml@2.8.0)
 
   examples/radix:
     dependencies:
@@ -97,7 +101,7 @@ importers:
         version: 18.3.2
       '@vitejs/plugin-react-swc':
         specifier: ^3.7.2
-        version: 3.7.2(vite@6.0.3(@types/node@22.10.1)(terser@5.36.0)(tsx@4.19.2))
+        version: 3.7.2(vite@6.0.3(@types/node@22.10.1)(terser@5.36.0)(tsx@4.19.2)(yaml@2.8.0))
       eslint:
         specifier: ^9.16.0
         version: 9.16.0
@@ -118,7 +122,7 @@ importers:
         version: 8.17.0(eslint@9.16.0)(typescript@5.7.2)
       vite:
         specifier: ^6.0.3
-        version: 6.0.3(@types/node@22.10.1)(terser@5.36.0)(tsx@4.19.2)
+        version: 6.0.3(@types/node@22.10.1)(terser@5.36.0)(tsx@4.19.2)(yaml@2.8.0)
 
   examples/rolldown:
     devDependencies:
@@ -184,7 +188,7 @@ importers:
         version: 2.8.17
       vite:
         specifier: ^6.0.3
-        version: 6.0.3(@types/node@22.10.1)(terser@5.36.0)(tsx@4.19.2)
+        version: 6.0.3(@types/node@22.10.1)(terser@5.36.0)(tsx@4.19.2)(yaml@2.8.0)
 
 packages:
 
@@ -2578,6 +2582,9 @@ packages:
   eventemitter3@4.0.7:
     resolution: {integrity: sha512-8guHBZCwKnFhYdHr2ysuRWErTwhoN2X8XELRlrRwpmfeY2jjuUN4taQMsULKUVo1K4DvZl+0pgfyoysHxvmvEw==}
 
+  eventemitter3@5.0.1:
+    resolution: {integrity: sha512-GWkBvjiSZK87ELrYOSESUYeVIc9mvLLf/nXalMOS5dYrgZq9o5OVkbZAVM06CVxYsCwH9BDZFPlQTlPA1j4ahA==}
+
   events@3.3.0:
     resolution: {integrity: sha512-mQw+2fkQbALzQ7V0MY0IqdnXNOeTtP4r0lN9z7AAawCXgqea7bDii20AYrIBrFd/Hx0M2Ocz6S111CaFkUcb0Q==}
     engines: {node: '>=0.8.x'}
@@ -3843,6 +3850,11 @@ packages:
   xtend@4.0.2:
     resolution: {integrity: sha512-LKYU1iAXJXUgAXn9URjiu+MWhyUXHsvfp7mcuYm9dSUKK0/CjtrUwFAxD82/mCWbtLsGjFIad0wIsod4zrTAEQ==}
     engines: {node: '>=0.4'}
+
+  yaml@2.8.0:
+    resolution: {integrity: sha512-4lLa/EcQCB0cJkyts+FpIRx5G/llPxfP6VQU5KByHEhLxY3IJCH0f0Hy1MHI8sClTvsIb8qwRJ6R/ZdlDJ/leQ==}
+    engines: {node: '>= 14.6'}
+    hasBin: true
 
   yocto-queue@0.1.0:
     resolution: {integrity: sha512-rVksvsnNCdJ/ohGc6xgPwyN8eheCxsiLM8mxuE/t/mOVqJewPuO1miLpTHQiRgTKCLexL4MeAFVagts7HmNZ2Q==}
@@ -5368,10 +5380,10 @@ snapshots:
     dependencies:
       valibot: 1.0.0(typescript@5.7.2)
 
-  '@vitejs/plugin-react-swc@3.7.2(vite@6.0.3(@types/node@22.10.1)(terser@5.36.0)(tsx@4.19.2))':
+  '@vitejs/plugin-react-swc@3.7.2(vite@6.0.3(@types/node@22.10.1)(terser@5.36.0)(tsx@4.19.2)(yaml@2.8.0))':
     dependencies:
       '@swc/core': 1.9.1
-      vite: 6.0.3(@types/node@22.10.1)(terser@5.36.0)(tsx@4.19.2)
+      vite: 6.0.3(@types/node@22.10.1)(terser@5.36.0)(tsx@4.19.2)(yaml@2.8.0)
     transitivePeerDependencies:
       - '@swc/helpers'
 
@@ -6052,6 +6064,8 @@ snapshots:
   etag@1.8.1: {}
 
   eventemitter3@4.0.7: {}
+
+  eventemitter3@5.0.1: {}
 
   events@3.3.0: {}
 
@@ -7091,12 +7105,12 @@ snapshots:
 
   unpipe@1.0.0: {}
 
-  unplugin-vue@5.2.1(@types/node@22.10.1)(terser@5.36.0)(tsx@4.19.2)(vue@3.5.12(typescript@5.7.2)):
+  unplugin-vue@5.2.1(@types/node@22.10.1)(terser@5.36.0)(tsx@4.19.2)(vue@3.5.12(typescript@5.7.2))(yaml@2.8.0):
     dependencies:
       '@vue/reactivity': 3.5.13
       debug: 4.3.7
       unplugin: 1.16.0
-      vite: 6.0.3(@types/node@22.10.1)(terser@5.36.0)(tsx@4.19.2)
+      vite: 6.0.3(@types/node@22.10.1)(terser@5.36.0)(tsx@4.19.2)(yaml@2.8.0)
       vue: 3.5.12(typescript@5.7.2)
     transitivePeerDependencies:
       - '@types/node'
@@ -7154,7 +7168,7 @@ snapshots:
 
   vary@1.1.2: {}
 
-  vite@6.0.3(@types/node@22.10.1)(terser@5.36.0)(tsx@4.19.2):
+  vite@6.0.3(@types/node@22.10.1)(terser@5.36.0)(tsx@4.19.2)(yaml@2.8.0):
     dependencies:
       esbuild: 0.24.0
       postcss: 8.4.49
@@ -7164,6 +7178,7 @@ snapshots:
       fsevents: 2.3.3
       terser: 5.36.0
       tsx: 4.19.2
+      yaml: 2.8.0
 
   vue@3.5.12(typescript@5.7.2):
     dependencies:
@@ -7314,6 +7329,9 @@ snapshots:
   ws@8.18.0: {}
 
   xtend@4.0.2: {}
+
+  yaml@2.8.0:
+    optional: true
 
   yocto-queue@0.1.0: {}
 

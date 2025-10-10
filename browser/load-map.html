@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <body>
+      <div id="container"></div>
+
+      <script type="importmap">
+        {
+          "imports": {
+            "three": "https://cdn.jsdelivr.net/npm/three@0.177.0/+esm",
+            "orbit": "https://cdn.jsdelivr.net/npm/three@0.177.0/examples/jsm/controls/OrbitControls.js"
+          }
+        }
+      </script>
+      <script type="module">
+        import * as THREE from 'three'
+        import { OrbitControls } from 'orbit'
+        // 场景
+        const scene = new THREE.Scene()
+        // 相机
+        const camera = new THREE.PerspectiveCamera(70, window.innerWidth / window.innerHeight, 0.1, 10000)
+        camera.position.set(0, 0, 5)
+        // 渲染器
+        const renderer = new THREE.WebGLRenderer({ antialias: true })
+        renderer.setSize(window.innerWidth, window.innerHeight)
+        renderer.setPixelRatio(window.devicePixelRatio)
+        document.getElementById('container').appendChild(renderer.domElement)
+        const controls = new OrbitControls(camera, renderer.domElement)
+        controls.minDistance = 0.5 // 最小距离（最大放大）
+        controls.maxDistance = 12 // 最大距离（最大缩小）
+        controls.enableRotate = false; // 禁止旋转
+        controls.enablePan = true;     // 允许平移
+        controls.enableZoom = true;    // 允许缩放
+
+        controls.mouseButtons = {
+          LEFT: THREE.MOUSE.PAN,
+          MIDDLE: THREE.MOUSE.DOLLY,  // 滚轮缩放（可选）
+          RIGHT: null                 // 不绑定；或为undefined/null
+        };
+
+        controls.screenSpacePanning = true
+        // 加载图片贴图
+        const loader = new THREE.TextureLoader()
+        loader.load('./map.jpg', (texture) => {
+          texture.colorSpace = THREE.SRGBColorSpace
+          texture.minFilter = THREE.LinearFilter // 纹理缩小时线性过滤
+          texture.magFilter = THREE.LinearFilter // 纹理放大时线性过滤（更细腻）
+          // 将图片显示为平面
+          const geometry = new THREE.PlaneGeometry(4, 3)
+          const material = new THREE.MeshBasicMaterial({ map: texture })
+          const plane = new THREE.Mesh(geometry, material)
+          plane.position.set(0, 0, 0)
+          scene.add(plane)
+          animate()
+        })
+        function animate() {
+          requestAnimationFrame(animate)
+          controls.update()
+          renderer.render(scene, camera)
+        }
+        // 可选：窗口自适应
+        window.addEventListener('resize', () => {
+          camera.aspect = window.innerWidth / window.innerHeight
+          camera.updateProjectionMatrix()
+          renderer.setSize(window.innerWidth, window.innerHeight)
+        })
+      </script>
+    </body>
+  </body>
+</html>
