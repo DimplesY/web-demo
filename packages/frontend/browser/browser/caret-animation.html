@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      height: 100vh;
+      /* 改为暗色调背景 */
+      background-color: #1e1e1e;
+    }
+    
+    .box {
+      position: relative;
+    }
+    .editor {
+      width: 500px;
+      height: 300px;
+      resize: none;
+      outline: transparent;
+      caret-color: transparent;
+      padding: 5px;
+      /* 暗色调样式 */
+      background-color: #2d2d2d;
+      color: #ffffff;
+      border: 1px solid #444;
+    }
+
+    .editor:focus {
+      outline: none;
+      border-color: #555;
+    }
+
+    .mirror { 
+      white-space: pre-wrap;
+      /* 暗色调文字颜色 */
+      color: #ffffff;
+    }
+
+    .caret { 
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      padding: 8px 0;
+      /* height: 16px; */
+      width: 2px;
+      background: linear-gradient(to bottom, #ffffff, #cccccc);
+      /* 优化过渡效果，使动画更丝滑 */
+      transition: opacity 0.2s ease-out;
+      will-change: transform, opacity;
+      animation: blank 1.2s infinite;
+    }
+
+    @keyframes blank {
+      0% {
+        opacity: 1;
+      }
+      50% {
+        opacity: 0.2;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
+
+  </style>
+</head>
+<body>
+  
+  <div class="box">
+    <textarea id="textarea" class="editor"></textarea>
+    <div class="mirror"></div>
+    <div class="caret"></div>
+  </div>
+
+  <script>
+    const box = document.querySelector('.box');
+    const textarea = document.getElementById('textarea');
+    const mirror = document.querySelector('.mirror');
+    const caret = document.querySelector('.caret');
+
+    const textareaStyle = getComputedStyle(textarea);
+    Object.entries(textareaStyle).forEach(([key, value]) => {
+      mirror.style[key] = value;
+    });
+    mirror.style.height = 'auto';
+
+    // 光标持续显示的标志
+    let isCaretVisible = false;
+    let caretTimeout;
+
+    // 显示光标的方法
+    function showCaret() {
+      caret.style.animation = 'none';
+      caret.style.opacity = '1';
+      isCaretVisible = true;
+    }
+
+    // 隐藏光标并恢复动画的方法
+    function hideCaret() {
+      caret.style.animation = 'blank 1.2s infinite';
+      isCaretVisible = false;
+    }
+
+    function updateCaretPosition() { 
+      mirror.textContent = textarea.value;
+      const span = document.createElement('span');
+      span.textContent = '\u200b';
+      mirror.appendChild(span);
+      const lk = span.offsetLeft - mirror.offsetLeft;
+      const lt = span.offsetTop - mirror.offsetTop;
+      caret.style.transform = `translate(${lk}px, ${lt}px)`;
+    }
+
+    updateCaretPosition()
+
+    // 当文本区域获得焦点时显示光标
+    textarea.addEventListener('focus', showCaret);
+
+    // 当文本区域失去焦点时隐藏光标
+    textarea.addEventListener('blur', hideCaret);
+
+    // 用户开始输入时显示光标
+    textarea.addEventListener('input', () => {
+      updateCaretPosition();
+
+      // 输入时确保光标可见
+      showCaret();
+      
+      // 清除之前的定时器
+      clearTimeout(caretTimeout);
+      
+      // 如果光标应该是可见的，设置一段时间后恢复闪烁
+      if (isCaretVisible) {
+        caretTimeout = setTimeout(hideCaret, 500);
+      }
+    });
+
+    // 处理键盘事件
+    textarea.addEventListener('keydown', () => {
+      showCaret();
+      clearTimeout(caretTimeout);
+    });
+
+    textarea.addEventListener('keyup', () => {
+      clearTimeout(caretTimeout);
+      caretTimeout = setTimeout(() => {
+        if (document.activeElement === textarea) {
+          hideCaret();
+        }
+      }, 500);
+    });
+
+  </script>
+</body>
+</html>

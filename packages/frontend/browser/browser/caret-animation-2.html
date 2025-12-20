@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Custom Caret Fixed</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      height: 100vh;
+      background-color: #1e1e1e;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    
+    .box {
+      position: relative;
+      width: 500px;
+      height: 300px;
+    }
+    
+    .editor {
+      width: 100%;
+      height: 100%;
+      resize: none;
+      outline: transparent;
+      caret-color: transparent; /* 隐藏原生光标 */
+      padding: 10px; /* 稍微增加一点 padding */
+      background-color: #2d2d2d;
+      color: #ffffff;
+      border: 1px solid #444;
+      font-family: 'Consolas', monospace; /* 建议指定等宽字体 */
+      font-size: 16px;
+      line-height: 1.5;
+      overflow: auto;
+      white-space: pre-wrap;
+      word-wrap: break-word;
+      z-index: 2;
+      position: relative;
+      background: transparent; /* 透明背景以便观察 */
+    }
+
+    /* 镜像元素必须完全不可见，但样式要一致 */
+    .mirror { 
+      position: absolute;
+      top: 0;
+      left: 0;
+      visibility: hidden; /* 使用 visibility hidden 而不是 display none */
+      white-space: pre-wrap;
+      word-wrap: break-word;
+      z-index: -1;
+      /* 这里的样式会由 JS 覆盖，但默认写上比较好 */
+    }
+
+    .caret { 
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 2px;
+      height: 20px; /* 初始高度，JS会覆盖 */
+      background: #00ffcc;
+      box-shadow: 0 0 8px #00ffcc;
+      pointer-events: none;
+      z-index: 10;
+      /* 这里使用了 transform 过渡来实现丝滑移动 */
+      transition: transform 0.08s cubic-bezier(0.2, 0, 0.2, 1), opacity 0.2s;
+      will-change: transform, opacity;
+    }
+
+    /* 闪烁动画类 */
+    .blinking {
+      animation: blank 1s infinite;
+    }
+
+    @keyframes blank {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0; }
+    }
+  </style>
+</head>
+<body>
+  
+  <div class="box">
+    <textarea id="textarea" class="editor" spellcheck="false">Try clicking somewhere in the middle or using arrow keys.</textarea>
+    <div class="mirror"></div>
+    <div class="caret"></div>
+  </div>
+
+  <script>
+    const textarea = document.getElementById('textarea');
+    const mirror = document.querySelector('.mirror');
+    const caret = document.querySelector('.caret');
+
+    // 1. 初始化镜像样式
+    function syncStyles() {
+      const style = window.getComputedStyle(textarea);
+      
+      // 复制关键样式
+      const properties = [
+        'fontFamily', 'fontSize', 'fontWeight', 'fontStyle', 'letterSpacing', 
+        'lineHeight', 'textTransform', 'wordSpacing', 'textIndent', 
+        'paddingTop', 'paddingRight', 'paddingBottom', 'paddingLeft',
+        'borderTopWidth', 'borderRightWidth', 'borderBottomWidth', 'borderLeftWidth',
+        'boxSizing', 'whiteSpace', 'wordWrap', 'wordBreak'
+      ];
+      
+      properties.forEach(prop => {
+        mirror.style[prop] = style[prop];
+      });
+
+      // 关键：强制宽度一致 (减去滚动条的影响)
+      mirror.style.width = textarea.clientWidth + 'px';
+    }
+
+    // 2. 核心：更新光标位置
+    function updateCaretPosition() { 
+      // A. 获取光标之前的文本
+      const cursorPos = textarea.selectionEnd;
+      const textValue = textarea.value;
+      const textBefore = textValue.substring(0, cursorPos);
+      
+      // B. 填充镜像
+      mirror.textContent = textBefore;
+
+      // C. 处理换行符 Bug
+      // 如果光标在换行符后面，span 默认不会换行，需要加零宽空格强迫换行
+      if (textBefore.endsWith('\n')) {
+        mirror.appendChild(document.createTextNode('\u200b'));
+      }
+
+      // D. 插入定位 Span
+      const span = document.createElement('span');
+      span.textContent = '|'; // 必须有内容撑开高度
+      mirror.appendChild(span);
+
+      // E. 计算坐标
+      // OffsetLeft 是相对于父级 Box 的
+      // 必须减去 textarea 自身的滚动距离 (scrollLeft/scrollTop)
+      const rect = textarea.getBoundingClientRect();
+      const style = window.getComputedStyle(textarea);
+      const borderTop = parseFloat(style.borderTopWidth);
+      const borderLeft = parseFloat(style.borderLeftWidth);
+
+      // 计算最终坐标：span位置 - 滚动距离 + 边框修正
+      const x = span.offsetLeft - textarea.scrollLeft + borderLeft;
+      const y = span.offsetTop - textarea.scrollTop + borderTop;
+
+      // F. 应用位置
+      caret.style.transform = `translate(${x}px, ${y}px)`;
+      
+      // 可选：根据行高自动调整光标高度
+      // caret.style.height = span.offsetHeight + 'px';
+    }
+
+    // 3. 光标闪烁控制逻辑
+    let timer;
+    function resetBlink() {
+      caret.classList.remove('blinking');
+      caret.style.opacity = 1;
+      clearTimeout(timer);
+      timer = setTimeout(() => {
+        caret.classList.add('blinking');
+      }, 500); // 停止输入500ms后开始闪烁
+    }
+
+    // 4. 事件监听
+    window.addEventListener('resize', () => {
+        syncStyles();
+        updateCaretPosition();
+    });
+
+    // 监听所有可能改变光标位置的事件
+    // input: 打字
+    // click: 鼠标点击
+    // keyup: 方向键移动
+    // scroll: 滚动
+    ['input', 'click', 'keyup', 'keydown', 'focus'].forEach(evt => {
+      textarea.addEventListener(evt, (e) => {
+        // 如果是滚动事件，不需要重置闪烁，只需要更新位置
+        if (evt === 'keydown') {
+           // 稍微延迟以等待值变化（特别是回车键）
+          setTimeout(updateCaretPosition, 0);
+        } else {
+          updateCaretPosition();
+        }
+        
+        resetBlink();
+      });
+    });
+
+    textarea.addEventListener('scroll', () => {
+      updateCaretPosition(); 
+    });
+
+    textarea.addEventListener('blur', () => {
+      caret.style.opacity = 0; // 失去焦点隐藏
+    });
+
+    // 初始化
+    syncStyles();
+    updateCaretPosition();
+
+  </script>
+</body>
+</html>

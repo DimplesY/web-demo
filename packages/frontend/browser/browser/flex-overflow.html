@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      height: 100vh;
+    }
+    .box {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+    }
+    .section-1 { 
+      flex-grow: 1;
+      background-color: pink;
+      overflow-y: hidden;
+    }
+    .content {
+      height: 2000px;
+    }
+    .section-2 {
+      height: 100px;
+      background-color: blue;
+    }
+  </style>
+</head>
+<body>
+  <div class="box">
+    <div class="section-2"></div>
+    <div class="section-1">
+      <div class="content"></div>
+    </div>
+    <div class="section-2"></div>
+  </div>  
+</body>
+</html>
