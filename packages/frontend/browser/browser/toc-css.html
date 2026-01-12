@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * { 
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      width: 100vw;
+    }
+    .container {
+      width: 300px;
+      height: 300px;
+      border: 2px solid black;
+      anchor-name: --container-anchor;
+    }
+
+    .tooltip {
+      position: absolute;
+      position-anchor: --container-anchor;
+      top: anchor(bottom);
+      left: anchor(right);
+    }
+</style>
+</head>
+<body>
+
+  <div class="container"> 
+  </div>
+
+  <div class="tooltip">
+    你好
+  </div>
+  
+</body>
+</html>

@@ -111,6 +111,6 @@ console.log([1, [2, [3]]].flat(Infinity)); // [1,2,3]
 // 相当于 [[2, 4], [3, 6], [4, 8]].flat()
 console.log([1, 2, 3, 4, 5].flatMap((x) => [x, x * 2]));
 
-const arr2 = [5, 12, 8, 130, 44];
-console.log(arr2.at(3)); // 130
-console.log(arr2.at(-1)); // 130
+const arr3 = [5, 12, 8, 130, 44];
+console.log(arr3.at(3)); // 130
+console.log(arr3.at(-1)); // 130

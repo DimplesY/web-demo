@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+
+    var MyModule = (function () { 
+
+      var modules = {};
+      
+      function define(name, deps, impl) {
+        for (var i = 0; i < deps.length; i++) {
+          deps[i] = modules[deps[i]];
+        }
+        modules[name] = impl.apply(impl, deps);
+      }
+
+      function get(name) {
+        return modules[name];
+      }
+
+      return {
+        define: define,
+        get: get
+      };
+    })();
+
+    MyModule.define('moduleA', [], function () {
+      var name = 'moduleA';
+      return {
+        getName: function () {
+          return name;
+        }
+      };
+    });
+
+    MyModule.define('moduleB', ['moduleA'], function (moduleA) {
+      var name = 'moduleB';
+      return {
+        getName: function () {
+          return name;
+        },
+        getModuleA: function () {
+          return moduleA.getName();
+        }
+      };
+    });
+
+
+    var moduleB = MyModule.get('moduleB');
+    console.log(moduleB.getName());
+    console.log(moduleB.getModuleA());
+
+  </script>
+</body>
+</html>

@@ -67,8 +67,9 @@
       box-shadow: 0 0 8px #00ffcc;
       pointer-events: none;
       z-index: 10;
+      transform-origin: center center;
       /* 这里使用了 transform 过渡来实现丝滑移动 */
-      transition: transform 0.08s cubic-bezier(0.2, 0, 0.2, 1), opacity 0.2s;
+      transition: all 0.08s cubic-bezier(0.2, 0, 0.2, 1), opacity 0.2s;
       will-change: transform, opacity;
     }
 
@@ -78,15 +79,15 @@
     }
 
     @keyframes blank {
-      0%, 100% { opacity: 1; }
-      50% { opacity: 0; }
+      0%, 100% { transform: scale(0); }
+      50% { transform: scale(1); }
     }
   </style>
 </head>
 <body>
   
   <div class="box">
-    <textarea id="textarea" class="editor" spellcheck="false">Try clicking somewhere in the middle or using arrow keys.</textarea>
+    <textarea id="textarea" class="editor" spellcheck="false"></textarea>
     <div class="mirror"></div>
     <div class="caret"></div>
   </div>
@@ -151,10 +152,12 @@
       const y = span.offsetTop - textarea.scrollTop + borderTop;
 
       // F. 应用位置
-      caret.style.transform = `translate(${x}px, ${y}px)`;
+      // caret.style.transform = `translate(${x}px, ${y}px)`;
+      caret.style.left = x + 'px';
+      caret.style.top = y + 'px';
       
       // 可选：根据行高自动调整光标高度
-      // caret.style.height = span.offsetHeight + 'px';
+      caret.style.height = span.offsetHeight + 'px';
     }
 
     // 3. 光标闪烁控制逻辑
