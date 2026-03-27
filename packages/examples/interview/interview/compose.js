@@ -1,24 +1,22 @@
 function compose(...args){
-  return function(x){
-    return args.reduceRight((acc, fn) => fn(acc), x)
-  }
+  return args.reduceRight((acc, fn) => () => fn(acc), () => {})
 }
 
-function pipe(...args){
-  return function(x){
-    return args.reduce((acc, fn) => fn(acc), x)
-  }
-}
+// function pipe(...args){
+//   return function(x){
+//     return args.reduce((acc, fn) => fn(acc), x)
+//   }
+// }
 
 
-console.log(pipe((x) => x + 1, (x) => x + 2, (x) => x + 3)(0))
+// console.log(pipe((x) => x + 1, (x) => x + 2, (x) => x + 3)(0))
 
 
 
 // 输出 1 3 5 6 4 2
-function compose(...fns) {
- 
-}
+// function compose(...fns) {
+
+// }
 
 
 function f(next) {
@@ -39,5 +37,5 @@ function h(next) {
   console.log(6)
 }
 
-
 compose(f, g, h)()
+
